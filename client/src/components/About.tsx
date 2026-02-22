@@ -1,81 +1,60 @@
 import { motion } from "framer-motion";
-import studioImg from "@/assets/images/about-studio.png";
+import { CheckCircle2, Shield, TrendingUp } from "lucide-react";
 
 export default function About() {
-  const stats = [
-    { value: "40+", label: "Global Awards" },
-    { value: "12", label: "Years Experience" },
-    { value: "250+", label: "Projects Delivered" },
+  const values = [
+    {
+      title: "Clients Come First",
+      description: "We build everything around what works for you. Your goals. Your wins. Your growth.",
+      icon: <Shield className="text-primary" size={32} />,
+    },
+    {
+      title: "Straight Talk Only",
+      description: "No buzzwords. No hiding behind reports. Just clear updates and honest advice you can use.",
+      icon: <CheckCircle2 className="text-secondary" size={32} />,
+    },
+    {
+      title: "Results That Matter",
+      description: "More leads. More calls. More booked jobs. That's what we focus on — real growth.",
+      icon: <TrendingUp className="text-accent" size={32} />,
+    },
   ];
 
   return (
-    <section id="about" className="py-24 md:py-32 bg-background relative z-10">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 items-center">
-          
-          <div className="lg:col-span-5 lg:col-start-1 order-2 lg:order-1">
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl"
-            >
-              <img 
-                src={studioImg} 
-                alt="Our Creative Studio" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black/20 mix-blend-overlay"></div>
-            </motion.div>
-          </div>
-
-          <div className="lg:col-span-6 lg:col-start-7 order-1 lg:order-2 flex flex-col justify-center">
-            <motion.span 
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="uppercase tracking-[0.2em] text-xs font-medium text-white/50 mb-6 block"
-            >
-              The Studio
-            </motion.span>
-            
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-display leading-[1.1] mb-8"
-            >
-              We are a collective of <span className="italic font-light text-white/50">thinkers, designers,</span> and engineers.
-            </motion.h2>
-
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="text-lg text-white/60 mb-12 font-light leading-relaxed max-w-xl"
-            >
-              Based in London with a global mindset. We partner with ambitious leaders to build brands, digital products, and cinematic experiences that define tomorrow. We believe in design that moves people.
-            </motion.p>
-
-            <div className="grid grid-cols-3 gap-8 border-t border-white/10 pt-8">
-              {stats.map((stat, i) => (
-                <motion.div 
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 + (i * 0.1) }}
-                >
-                  <div className="text-3xl md:text-4xl font-display mb-2">{stat.value}</div>
-                  <div className="text-sm text-white/40">{stat.label}</div>
-                </motion.div>
-              ))}
+    <section id="about" className="py-24 bg-muted/30">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div>
+            <span className="text-xs font-bold text-primary uppercase tracking-[0.3em] mb-4 block">Our Mission</span>
+            <h2 className="text-4xl md:text-5xl font-display font-extrabold mb-8 leading-[1.1]">
+              Your Growth.<br />Our Mission.
+            </h2>
+            <div className="space-y-6 text-lg text-black/70 font-medium leading-relaxed">
+              <p>
+                Thomas Town Digital was built for one reason — to help local service businesses win. We're not just another agency; we're your growth partner, focused on real results, not vanity metrics.
+              </p>
+              <p>
+                From high-converting PPC campaigns and local SEO to websites that turn visitors into leads, we create smart, data-driven strategies that put your business ahead of the competition.
+              </p>
             </div>
           </div>
 
+          <div className="grid grid-cols-1 gap-6">
+            {values.map((value, i) => (
+              <motion.div 
+                key={value.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-white p-8 rounded-2xl shadow-sm border border-black/5 hover:shadow-md transition-shadow"
+              >
+                <div className="mb-4">{value.icon}</div>
+                <h3 className="text-xl font-bold mb-2">{value.title}</h3>
+                <p className="text-black/60">{value.description}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

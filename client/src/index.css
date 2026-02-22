@@ -29,39 +29,39 @@
   --color-ring: hsl(var(--ring));
 
   --font-sans: 'Inter', sans-serif;
-  --font-display: 'Space Grotesk', sans-serif;
+  --font-display: 'Plus Jakarta Sans', sans-serif;
 }
 
 :root {
-  --background: 0 0% 4%;
-  --foreground: 0 0% 98%;
+  --background: 0 0% 100%;
+  --foreground: 0 0% 0%;
 
-  --card: 0 0% 6%;
-  --card-foreground: 0 0% 98%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 0%;
 
-  --popover: 0 0% 6%;
-  --popover-foreground: 0 0% 98%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 0%;
 
-  --primary: 0 0% 98%;
-  --primary-foreground: 0 0% 4%;
+  --primary: 142 71% 45%; /* Thomas Town Green */
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 0 0% 12%;
-  --secondary-foreground: 0 0% 98%;
+  --secondary: 221 83% 53%; /* Thomas Town Blue */
+  --secondary-foreground: 0 0% 100%;
 
-  --muted: 0 0% 12%;
-  --muted-foreground: 0 0% 60%;
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 45%;
 
-  --accent: 0 0% 12%;
-  --accent-foreground: 0 0% 98%;
+  --accent: 48 96% 53%; /* Thomas Town Yellow */
+  --accent-foreground: 0 0% 0%;
 
-  --destructive: 0 62.8% 30.6%;
+  --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 98%;
 
-  --border: 0 0% 15%;
-  --input: 0 0% 15%;
-  --ring: 0 0% 80%;
+  --border: 0 0% 90%;
+  --input: 0 0% 90%;
+  --ring: 142 71% 45%;
 
-  --radius: 0.5rem;
+  --radius: 0.75rem;
 }
 
 @layer base {
@@ -72,16 +72,10 @@
     @apply font-sans antialiased bg-background text-foreground;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-tight;
+    @apply font-display tracking-tight font-bold;
   }
 }
 
-.text-stroke {
-  -webkit-text-stroke: 1px rgba(255,255,255,0.2);
-  color: transparent;
-}
-
-.text-stroke:hover {
-  color: white;
-  transition: color 0.3s ease;
+.brand-gradient {
+  background: linear-gradient(135deg, hsl(142 71% 45%) 0%, hsl(221 83% 53%) 100%);
 }
