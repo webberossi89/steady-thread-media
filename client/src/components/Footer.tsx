@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container mx-auto px-6 max-w-[1200px]">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-2">
-            <Link href="/" className="block mb-6 h-32 hover:opacity-80 transition-opacity">
+            <Link href="/" className="block mb-6 h-48 hover:opacity-80 transition-opacity">
               <img src={verticalLogo} alt="Steady Thread Media" className="h-full w-auto object-contain object-left" />
             </Link>
             <p className="text-muted-foreground max-w-sm mb-8">

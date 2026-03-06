@@ -33,7 +33,7 @@ export default function Nav() {
       }`}
     >
       <div className="container mx-auto px-6 max-w-[1200px] flex items-center justify-between">
-        <Link href="/" className="z-50 relative h-10 md:h-12 hover:opacity-80 transition-opacity">
+        <Link href="/" className="z-50 relative h-16 md:h-20 hover:opacity-80 transition-opacity">
           <img src={horizontalLogo} alt="Steady Thread Media" className="h-full w-auto object-contain" />
         </Link>
 
