@@ -1,0 +1,687 @@
+I built this off the current site positioning I could verify: Steady Thread presents itself as a **B2B growth consultancy** focused on **strategic GTM solutions**, **proven results**, and helping companies generate **consistent, qualified opportunities**. I could also verify an active **Contact** page and at least several **blog/insight-style articles** around positioning, marketing automation, and lead handoff. ([Steady Thread][1])
+
+That means your rebuild in Replit should lean into **consulting authority + clear conversion**, not a generic creative agency layout. The goal should be to move a visitor from:
+
+**“What is this?” → “This is for companies like mine” → “They understand GTM problems” → “Their process is credible” → “I should book a call.”**
+
+---
+
+# Recommended site map
+
+Use a lean structure first:
+
+* Home
+* Services
+* Approach
+* Case Studies
+* Insights
+* About
+* Contact
+
+Recommended CTA label across the site:
+
+**Book a Strategy Call**
+
+This matches the current GTM-consulting positioning better than something vague like “Learn More.” ([Steady Thread][1])
+
+---
+
+# 1. Exact homepage wireframe
+
+## Section 1: Hero
+
+**Goal:** immediately clarify who you help and what outcome you create.
+
+**Layout**
+
+* Left: headline, supporting copy, CTA buttons
+* Right: abstract visual, framework graphic, or subtle grid/shape system
+
+**Copy framework**
+**Headline:**
+Strategic GTM systems for consistent B2B growth
+
+**Subheadline:**
+We help B2B companies clarify positioning, strengthen demand generation, and build go-to-market systems that create qualified opportunities.
+
+**Primary CTA:**
+Book a Strategy Call
+
+**Secondary CTA:**
+See Our Approach
+
+**Optional proof line under CTAs:**
+Trusted by B2B teams that need more clarity, better pipeline, and stronger execution.
+
+---
+
+## Section 2: What you solve
+
+**Goal:** show you understand the pain.
+
+**Headline:**
+Growth stalls when GTM lacks structure
+
+**3-column problem grid**
+
+* Unclear positioning
+* Inconsistent pipeline
+* Disconnected sales and marketing
+
+**Supporting copy:**
+Most growth issues are not caused by a lack of effort. They come from unclear messaging, weak process, and acquisition systems that do not work together.
+
+---
+
+## Section 3: Who you help
+
+**Goal:** qualify fit fast.
+
+**Headline:**
+Built for B2B teams that need traction
+
+**Cards**
+
+* SaaS companies
+* Technical founders
+* Early-stage revenue teams
+* Service businesses with complex sales cycles
+* Companies refining positioning
+* Teams trying to improve lead quality
+
+---
+
+## Section 4: Services snapshot
+
+**Goal:** show breadth without overwhelming.
+
+**Headline:**
+How we help
+
+**3 service cards**
+
+1. GTM Strategy
+   Positioning, ICP clarity, messaging, channel strategy
+
+2. Demand Generation
+   Campaign architecture, funnel planning, lead flow improvement
+
+3. Revenue Optimization
+   Sales-marketing alignment, conversion improvements, handoff process
+
+**CTA:**
+Explore Services
+
+---
+
+## Section 5: Your framework
+
+**Goal:** differentiate with process.
+
+**Headline:**
+The Steady Thread framework
+
+**4-step horizontal flow**
+
+1. Diagnose
+   Audit current funnel, messaging, and GTM gaps
+
+2. Clarify
+   Refine offer, audience, and market position
+
+3. Build
+   Create channel and conversion systems
+
+4. Optimize
+   Improve performance with data and feedback loops
+
+---
+
+## Section 6: Results / trust
+
+**Goal:** validate.
+
+**Headline:**
+Strategic GTM. Measurable progress.
+
+**Use one of these formats**
+
+* 3 featured metrics
+* 2 testimonials + 1 case study stat
+* logos + short outcomes
+
+**Example placeholders**
+
+* Improved qualified pipeline
+* Sharper positioning
+* Better conversion efficiency
+
+Do not invent hard numbers unless you have them.
+
+---
+
+## Section 7: Featured case studies
+
+**Goal:** prove application.
+
+**Headline:**
+Selected work
+
+Each card should include:
+
+* client type
+* challenge
+* what you changed
+* outcome
+
+**CTA:**
+View Case Studies
+
+---
+
+## Section 8: Insights
+
+Since the current site already has blog content around GTM, positioning, lead handoff, and automation, keep this as an authority section. ([Steady Thread][2])
+
+**Headline:**
+Insights on B2B growth and GTM execution
+
+Show 3 latest posts.
+
+**CTA:**
+Read More Insights
+
+---
+
+## Section 9: Final CTA
+
+**Headline:**
+Need a clearer path to qualified growth?
+
+**Copy:**
+Let’s identify where your GTM strategy is breaking down and what to fix first.
+
+**CTA:**
+Book a Strategy Call
+
+---
+
+# 2. Replit build structure
+
+Use this page/component structure:
+
+```txt
+/
+  index.html
+  /services/index.html
+  /approach/index.html
+  /case-studies/index.html
+  /insights/index.html
+  /about/index.html
+  /contact/index.html
+  /blog/[slug].html or route-based if using a framework
+
+/assets
+  /css
+    base.css
+    layout.css
+    components.css
+    pages.css
+  /js
+    main.js
+  /img
+    hero/
+    icons/
+    case-studies/
+```
+
+If you are using a modern Replit stack, I would build this in **Next.js or Astro**.
+My preference for this site is:
+
+* **Astro** if mostly content/marketing site
+* **Next.js** if you want easier future CMS integration and dynamic case studies/blog
+
+For speed and clean performance, Astro is the better fit.
+
+---
+
+# 3. Design system for the site
+
+Using the brand guide direction:
+
+## Colors
+
+* Primary background: `#1A1A1A`
+* Accent 1: `#F0D6FF`
+* Accent 2: `#FFFFEB`
+* White: `#FFFFFF`
+* Soft neutral text on dark: `#D9D4CF`
+
+## Typography
+
+* Heading font: editorial serif style
+* Body font: Inter or similar sans-serif
+* H1 large and high contrast
+* generous whitespace
+* avoid dense paragraphs
+
+## Visual direction
+
+* dark hero sections
+* cream or soft-light content sections
+* lavender used selectively for emphasis
+* pill-style tags/buttons for topic labels and micro-navigation
+
+---
+
+# 4. Layout system
+
+## Container
+
+```css
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 24px;
+```
+
+## Section spacing
+
+```css
+padding: 96px 0;
+```
+
+## Grid patterns
+
+Use only 3 main patterns:
+
+* 2-column hero / explainer
+* 3-card services / proof / industries
+* single-column CTA / narrative sections
+
+This will keep the site visually consistent.
+
+---
+
+# 5. Copy for every main page
+
+## Home
+
+### Hero
+
+**Strategic GTM systems for consistent B2B growth**
+
+We help B2B companies build clearer positioning, stronger demand generation, and more effective go-to-market systems that create qualified opportunities.
+
+Buttons:
+
+* Book a Strategy Call
+* See Our Approach
+
+### Problem section
+
+**Growth gets harder when GTM is fragmented**
+
+When positioning is unclear, channels are disconnected, and handoffs break down, growth slows. We help teams fix the underlying system so marketing and revenue efforts work together.
+
+### Services section
+
+**What we do**
+
+**GTM Strategy**
+Define the audience, sharpen the message, and create a clear go-to-market plan.
+
+**Demand Generation**
+Build acquisition systems that support awareness, conversion, and qualified pipeline.
+
+**Revenue Optimization**
+Improve the path from first touch to sales conversation with better alignment and better process.
+
+### Framework section
+
+**How we work**
+
+**Diagnose**
+We identify friction across positioning, acquisition, and conversion.
+
+**Clarify**
+We tighten your messaging, audience fit, and strategic direction.
+
+**Build**
+We create the structures needed for scalable demand and cleaner execution.
+
+**Optimize**
+We use performance signals and operational feedback to improve results over time.
+
+### Final CTA
+
+**Need a clearer path to growth?**
+Book a strategy call and we’ll identify the highest-leverage opportunities in your GTM system.
+
+---
+
+## Services page
+
+### Hero
+
+**Services built around B2B growth execution**
+
+We help companies improve go-to-market strategy, demand generation, and conversion systems so growth becomes more predictable.
+
+### Section 1: GTM Strategy
+
+**GTM Strategy**
+
+For companies that need a sharper market position and a clearer path to growth.
+
+What this can include:
+
+* ICP definition
+* market positioning
+* messaging strategy
+* offer clarity
+* channel prioritization
+* GTM roadmap
+
+### Section 2: Demand Generation
+
+**Demand Generation**
+
+For teams that need stronger lead flow and better channel performance.
+
+What this can include:
+
+* funnel planning
+* campaign architecture
+* paid media strategy
+* nurture journey planning
+* landing page strategy
+* acquisition system design
+
+### Section 3: Revenue Optimization
+
+**Revenue Optimization**
+
+For teams that need better conversion from demand to pipeline.
+
+What this can include:
+
+* sales-marketing alignment
+* lead routing and handoff
+* qualification logic
+* conversion analysis
+* reporting clarity
+* process improvements
+
+### CTA
+
+**Want help identifying the right starting point?**
+Book a Strategy Call
+
+---
+
+## Approach page
+
+### Hero
+
+**A structured approach to B2B growth**
+
+We focus on the parts of GTM that drive clarity, consistency, and conversion.
+
+### Main content
+
+**1. Diagnose**
+We assess your current positioning, channel mix, funnel flow, and operational gaps.
+
+**2. Clarify**
+We define the audience, message, and strategic priorities that should guide execution.
+
+**3. Build**
+We create the systems, assets, and workflows needed to support demand and revenue growth.
+
+**4. Optimize**
+We monitor performance, identify friction, and refine what is not working.
+
+### Closing
+
+The objective is not more activity. It is a more effective system.
+
+---
+
+## Case Studies page
+
+### Hero
+
+**GTM work built around real business outcomes**
+
+See how strategic clarity, stronger execution, and better process can improve growth performance.
+
+### Card structure for each case study
+
+* Client / industry
+* Challenge
+* Strategic approach
+* What changed
+* Outcome
+
+### Suggested format
+
+**Challenge**
+The company had demand activity but weak conversion quality.
+
+**Approach**
+We refined positioning, improved funnel structure, and aligned campaign strategy to revenue goals.
+
+**Outcome**
+The result was a stronger path to qualified opportunities and a more focused GTM model.
+
+---
+
+## About page
+
+### Hero
+
+**Built around strategic clarity and sustainable growth**
+
+Steady Thread Media helps B2B companies strengthen the systems behind growth, from positioning to pipeline.
+
+### Story section
+
+The strongest growth strategies are rarely built from isolated tactics. They come from clear positioning, disciplined execution, and a GTM system that connects marketing to revenue.
+
+That is the focus of Steady Thread Media: helping teams build a stronger thread between strategy, demand, and results.
+
+### Principles section
+
+* Clarity before scale
+* Strategy before channel expansion
+* Systems over one-off tactics
+* Revenue alignment matters
+
+---
+
+## Contact page
+
+### Hero
+
+**Let’s talk about your GTM strategy**
+
+If you need sharper positioning, stronger demand generation, or a better conversion path, let’s start with a focused conversation.
+
+### Form fields
+
+* Name
+* Email
+* Company
+* Website
+* What are you trying to improve?
+* Current growth stage
+* Submit button: Book a Strategy Call
+
+### Optional side panel
+
+**Best fit for**
+
+* B2B companies
+* teams refining GTM strategy
+* businesses improving lead quality
+* organizations aligning marketing and sales
+
+---
+
+# 6. Recommended homepage component order in code
+
+```txt
+Header
+Hero
+Problem
+WhoWeHelp
+ServicesPreview
+Framework
+Proof
+CaseStudiesPreview
+InsightsPreview
+FinalCTA
+Footer
+```
+
+---
+
+# 7. Suggested nav + footer structure
+
+## Header nav
+
+* Services
+* Approach
+* Case Studies
+* Insights
+* About
+* Contact
+* CTA button: Book a Strategy Call
+
+## Footer
+
+Column 1:
+
+* short brand statement
+
+Column 2:
+
+* Services
+* Approach
+* Case Studies
+* Insights
+
+Column 3:
+
+* About
+* Contact
+
+Bottom row:
+
+* copyright
+* privacy
+* linkedin if relevant
+
+---
+
+# 8. SEO page architecture
+
+Because the current site already signals GTM and B2B growth consulting, your service pages should reinforce those themes clearly. ([Steady Thread][1])
+
+Recommended slug structure:
+
+* `/services`
+* `/services/gtm-strategy`
+* `/services/demand-generation`
+* `/services/revenue-optimization`
+* `/approach`
+* `/case-studies`
+* `/insights`
+* `/contact`
+
+## Homepage SEO direction
+
+**Title:**
+Strategic GTM Solutions for B2B Growth | Steady Thread Media
+
+**Meta description:**
+Steady Thread Media helps B2B companies build clearer go-to-market strategy, stronger demand generation systems, and more consistent qualified opportunities.
+
+## Services page SEO direction
+
+**Title:**
+B2B GTM Strategy and Demand Generation Services | Steady Thread Media
+
+**Meta description:**
+Explore GTM strategy, demand generation, and revenue optimization services designed to help B2B companies improve growth performance.
+
+---
+
+# 9. Replit execution plan
+
+## Phase 1
+
+Build the marketing site shell:
+
+* homepage
+* services
+* approach
+* about
+* contact
+
+## Phase 2
+
+Add:
+
+* case studies index
+* insights/blog index
+* reusable CTA blocks
+
+## Phase 3
+
+Add polish:
+
+* animations
+* CMS integration
+* structured metadata
+* forms + CRM connection
+
+---
+
+# 10. Best stack recommendation
+
+For your case, I would use:
+
+* **Astro**
+* static pages
+* MD or CMS-backed blog
+* simple contact form integration
+* deploy to Vercel or Netlify
+
+Use **Next.js** only if you know you will want:
+
+* dynamic content
+* gated resources
+* future app-style functionality
+* deeper CRM/API integrations
+
+---
+
+# 11. What to build first today
+
+Build in this order:
+
+1. Header + footer
+2. Homepage sections
+3. Services page
+4. Approach page
+5. Contact page
+6. Case studies page
+7. Insights page
+
+That gets you a strong V1 fast.
+
+Next move: I can turn this into a **full Replit-ready site spec with section-by-section component names, content JSON, and starter HTML/CSS structure**.
+
+[1]: https://steadythreadmedia.com/?utm_source=chatgpt.com "Steady Thread - Strategic GTM Solutions for B2B Growth"
+[2]: https://steadythreadmedia.com/blog/lead-handoff-process-sales-marketing?utm_source=chatgpt.com "Lead Handoff Process Optimization | Steady Thread"

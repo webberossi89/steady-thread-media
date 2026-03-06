@@ -1,0 +1,433 @@
+# Steady Thread Media
+
+Brand Style Guide
+
+---
+
+# 1. Brand Overview
+
+Steady Thread Media is positioned as a **modern B2B growth consultancy** focused on helping companies build **structured, predictable go-to-market systems**.
+
+The visual brand reflects:
+
+* clarity
+* precision
+* editorial sophistication
+* modern SaaS aesthetics
+
+The overall look should feel **minimal, strategic, and premium**, avoiding loud or overly playful design.
+
+---
+
+# 2. Color System
+
+## Primary Brand Color
+
+![Image](https://www.colorhexa.com/1a1a1a.png)
+
+![Image](https://i.etsystatic.com/38298969/r/il/fe62a8/6780718900/il_1080xN.6780718900_2crx.jpg)
+
+![Image](https://www.schemecolor.com/images/hexcolor/1A1A1A.png)
+
+![Image](https://icolorpalette.com/download/shades/1a1a1a_color_shades.jpg)
+
+| Property | Value                    |
+| -------- | ------------------------ |
+| HEX      | #1A1A1A                  |
+| RGB      | 26, 26, 26               |
+| Role     | Primary background color |
+
+Usage:
+
+* website background
+* hero sections
+* navigation bar
+* footer
+* dark content sections
+
+Text on this color should generally be **white or cream**.
+
+---
+
+## Accent Color 1
+
+![Image](https://kidspattern.com/featured/pale-lavender-E6D6F2.svg)
+
+![Image](https://images.openai.com/static-rsc-3/05YAdefYjZu0mMDxknoYmN6t2vxC4TXTIRwSWBc01pmR75kLwc3gw-oKWHgnaY4OP0D4hT0whl9yMrlvkP4ubCxQur_wnGfQJa1aWS-Wplk?purpose=fullsize\&v=1)
+
+![Image](https://images.media.io/colors/heather-cloud-white-purple-color-palette.jpg)
+
+![Image](https://kidspattern.com/palette/light-purple_h_f2e6fe-ca99ff-e5cffc-f2e6ff-f0e5ff_11-10-10-11-58_hex.svg)
+
+| Property | Value                |
+| -------- | -------------------- |
+| HEX      | #F0D6FF              |
+| RGB      | 240, 214, 255        |
+| Role     | Primary accent color |
+
+Usage:
+
+* highlighted words in headlines
+* buttons
+* hover states
+* icons
+* links
+
+This color should be used **sparingly to draw attention**.
+
+---
+
+## Accent Color 2
+
+![Image](https://preview.colorkit.co/color/ffffeb.png?size=wallpaper\&static=true)
+
+![Image](https://cdn.sanity.io/images/599r6htc/regionalized/a509be4ae31fac4e433dd41cff7be4c4f42f8e1c-1440x810.png?auto=format\&fit=max\&h=810\&q=75\&w=1440)
+
+![Image](https://images.openai.com/static-rsc-3/sOYeyag2vDQCswfO0HEvfeBxmu57kTLXVFOvFe0Ny2ADLRTvED4TsovorWEE6OJLJOSKIRE-r6wg_TnLv2pTYgOR33nfTX5PVKnoneOPdqU?purpose=fullsize\&v=1)
+
+![Image](https://colordrop.io/api/image/85636)
+
+| Property | Value                  |
+| -------- | ---------------------- |
+| HEX      | #FFFFEB                |
+| RGB      | 255, 255, 235          |
+| Role     | Light background color |
+
+Usage:
+
+* content sections
+* cards
+* forms
+* blog pages
+* alternating page sections
+
+Helps balance the dark sections.
+
+---
+
+## Supporting Colors
+
+| Purpose      | Color        | Hex     |
+| ------------ | ------------ | ------- |
+| White text   | White        | #FFFFFF |
+| Muted text   | Soft gray    | #B8B8B8 |
+| Border color | Neutral gray | #2A2A2A |
+
+---
+
+# 3. Color Usage Ratio
+
+Recommended usage across the site:
+
+| Color              | Usage  |
+| ------------------ | ------ |
+| Charcoal (#1A1A1A) | 65–70% |
+| Cream (#FFFFEB)    | 20–25% |
+| Lavender (#F0D6FF) | 5–10%  |
+
+This maintains a **minimal and premium feel**.
+
+---
+
+# 4. Typography
+
+## Heading Font
+
+Style category:
+
+**Modern Editorial Serif**
+
+Recommended font options:
+
+| Font             | Type             |
+| ---------------- | ---------------- |
+| Canela           | Premium          |
+| Recoleta         | Premium          |
+| Editorial New    | Premium          |
+| Playfair Display | Free alternative |
+
+Recommended implementation:
+
+Primary heading font
+**Playfair Display** (for simplicity and accessibility)
+
+---
+
+## Body Font
+
+Recommended font:
+
+**Inter**
+
+Reason:
+
+* extremely readable
+* modern SaaS standard
+* pairs well with serif headlines
+
+---
+
+## Typography Hierarchy
+
+| Element    | Font  | Weight    | Size    |
+| ---------- | ----- | --------- | ------- |
+| H1         | Serif | Bold      | 56–72px |
+| H2         | Serif | Semi Bold | 40–48px |
+| H3         | Serif | Medium    | 28–32px |
+| Body       | Inter | Regular   | 16–18px |
+| Small text | Inter | Regular   | 14px    |
+
+---
+
+# 5. Headline Styling
+
+Headlines often highlight key phrases using the accent color.
+
+Example:
+
+Flow is made
+**for you**
+
+Color usage:
+
+| Text               | Color   |
+| ------------------ | ------- |
+| Primary words      | #FFFFEB |
+| Highlighted phrase | #F0D6FF |
+
+---
+
+# 6. Button System
+
+## Primary Button
+
+| Property      | Value   |
+| ------------- | ------- |
+| Background    | #F0D6FF |
+| Text          | #1A1A1A |
+| Border radius | 999px   |
+
+Hover state:
+
+| Property   | Value   |
+| ---------- | ------- |
+| Background | #E5C1FF |
+
+---
+
+## Secondary Button
+
+| Property   | Value       |
+| ---------- | ----------- |
+| Background | Transparent |
+| Border     | 1px #FFFFEB |
+| Text       | #FFFFEB     |
+
+---
+
+# 7. UI Elements
+
+## Pill Tags (like in your screenshot)
+
+Used for:
+
+* audience labels
+* category filters
+* feature tags
+
+Style:
+
+| Property | Value       |
+| -------- | ----------- |
+| Border   | 1px #FFFFEB |
+| Text     | #FFFFEB     |
+| Padding  | 6px 14px    |
+| Radius   | 999px       |
+
+Active state:
+
+Background
+#F0D6FF
+
+Text
+#1A1A1A
+
+---
+
+# 8. Layout System
+
+## Page Width
+
+```
+1200px max-width
+```
+
+---
+
+## Section Spacing
+
+```
+padding-top: 96px
+padding-bottom: 96px
+```
+
+---
+
+## Section Pattern
+
+Recommended layout rhythm:
+
+1. Dark hero
+2. Cream content section
+3. Dark feature section
+4. Cream case studies
+5. Dark CTA
+
+---
+
+# 9. Component Patterns
+
+## Cards
+
+Used for:
+
+* services
+* blog posts
+* case studies
+
+Style:
+
+Background
+#FFFFEB
+
+Padding
+32px
+
+Border radius
+12px
+
+---
+
+## Navigation
+
+Background
+#1A1A1A
+
+Text
+#FFFFEB
+
+CTA button
+Lavender accent.
+
+---
+
+# 10. Imagery Style
+
+Use imagery that is:
+
+* minimal
+* soft lighting
+* neutral color palette
+* professional and modern
+
+Avoid:
+
+* overly bright stock photos
+* heavy color saturation
+* playful or cartoonish graphics
+
+---
+
+# 11. Icon Style
+
+Icons should be:
+
+* thin line icons
+* minimal
+* monochrome
+* lavender for active states
+
+---
+
+# 12. Brand Voice
+
+Tone should feel:
+
+* clear
+* confident
+* thoughtful
+* strategic
+
+Avoid:
+
+* buzzword heavy language
+* hype marketing
+* exaggerated claims
+
+Messaging should emphasize:
+
+* structure
+* clarity
+* strategic thinking
+* sustainable growth
+
+---
+
+# 13. Website Style Summary
+
+The Steady Thread visual identity should feel like:
+
+* modern SaaS platform
+* editorial consulting firm
+* minimalist design system
+
+Comparable design styles:
+
+* Linear
+* Vercel
+* Notion
+* Superhuman
+
+---
+
+# 14. Logo Usage
+
+The logo should appear:
+
+* white on dark backgrounds
+* charcoal on light backgrounds
+
+Minimum spacing:
+
+```
+0.5x logo height on all sides
+```
+
+Avoid:
+
+* stretching
+* adding drop shadows
+* recoloring the logo.
+
+---
+
+# 15. Core Brand Principles
+
+Design decisions should follow these principles:
+
+1. Clarity over decoration
+2. Minimal over complex
+3. Strategic over trendy
+4. Calm visual hierarchy
+5. High readability
+
+---
+
+If you'd like, I can also generate:
+
+1. **A Figma design system for this brand**
+2. **A full homepage UI layout**
+3. **A Replit-ready design token system**
+4. **Component library (buttons, cards, nav, forms)**
+
+Those will make building the site in Replit much faster.
