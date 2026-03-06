@@ -29,39 +29,39 @@
   --color-ring: hsl(var(--ring));
 
   --font-sans: 'Inter', sans-serif;
-  --font-display: 'Space Grotesk', sans-serif;
+  --font-display: 'Playfair Display', serif;
 }
 
 :root {
-  --background: 0 0% 4%;
-  --foreground: 0 0% 98%;
+  --background: 0 0% 10%;
+  --foreground: 0 0% 100%;
 
-  --card: 0 0% 6%;
-  --card-foreground: 0 0% 98%;
+  --card: 60 100% 96%;
+  --card-foreground: 0 0% 10%;
 
-  --popover: 0 0% 6%;
-  --popover-foreground: 0 0% 98%;
+  --popover: 0 0% 10%;
+  --popover-foreground: 0 0% 100%;
 
-  --primary: 0 0% 98%;
-  --primary-foreground: 0 0% 4%;
+  --primary: 278 100% 92%;
+  --primary-foreground: 0 0% 10%;
 
-  --secondary: 0 0% 12%;
-  --secondary-foreground: 0 0% 98%;
+  --secondary: 60 100% 96%;
+  --secondary-foreground: 0 0% 10%;
 
-  --muted: 0 0% 12%;
-  --muted-foreground: 0 0% 60%;
+  --muted: 0 0% 15%;
+  --muted-foreground: 30 11% 83%;
 
-  --accent: 0 0% 12%;
-  --accent-foreground: 0 0% 98%;
+  --accent: 278 100% 92%;
+  --accent-foreground: 0 0% 10%;
 
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 0 0% 98%;
 
-  --border: 0 0% 15%;
-  --input: 0 0% 15%;
-  --ring: 0 0% 80%;
+  --border: 0 0% 16%;
+  --input: 0 0% 16%;
+  --ring: 278 100% 92%;
 
-  --radius: 0.5rem;
+  --radius: 0.75rem;
 }
 
 @layer base {

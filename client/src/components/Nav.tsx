@@ -1,54 +1,59 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "wouter";
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [location] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
-    { name: "Work", href: "#work" },
-    { name: "Studio", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "Contact", href: "#contact" },
+    { name: "Services", href: "/services" },
+    { name: "Approach", href: "/approach" },
+    { name: "Case Studies", href: "/case-studies" },
+    { name: "Insights", href: "/insights" },
+    { name: "About", href: "/about" },
   ];
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ease-out ${
-        scrolled ? "bg-background/80 backdrop-blur-md py-4 border-b border-white/5" : "bg-transparent py-6"
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ease-out ${
+        scrolled ? "bg-background/95 backdrop-blur-md py-4 border-b border-white/5" : "bg-transparent py-6"
       }`}
     >
-      <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
-        <a href="/" className="text-2xl font-display font-medium tracking-tighter z-50 relative text-white">
-          OCULAR<span className="text-white/40">.</span>
-        </a>
+      <div className="container mx-auto px-6 max-w-[1200px] flex items-center justify-between">
+        <Link href="/" className="text-xl font-display font-bold tracking-tight z-50 relative text-white hover:text-primary transition-colors">
+          Steady Thread Media
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
               href={link.href}
-              className="text-sm font-medium tracking-wide text-white/70 hover:text-white transition-colors duration-300"
+              className={`text-sm font-medium transition-colors duration-200 ${
+                location === link.href ? "text-primary" : "text-white/70 hover:text-white"
+              }`}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#contact"
-            className="ml-4 px-6 py-2.5 rounded-full border border-white/20 hover:bg-white hover:text-black transition-all duration-300 text-sm font-medium text-white"
+          <Link
+            href="/contact"
+            className="ml-4 px-5 py-2.5 rounded-full bg-primary text-primary-foreground hover:bg-[#E5C1FF] transition-colors duration-200 text-sm font-medium"
           >
-            Start a Project
-          </a>
+            Book a Strategy Call
+          </Link>
         </nav>
 
         {/* Mobile Toggle */}
@@ -67,23 +72,42 @@ export default function Nav() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed inset-0 bg-background/95 backdrop-blur-xl z-40 flex flex-col justify-center px-8"
+            transition={{ duration: 0.2, ease: "easeInOut" }}
+            className="fixed inset-0 bg-background/98 backdrop-blur-xl z-40 flex flex-col justify-center px-8"
           >
             <nav className="flex flex-col gap-8 text-center">
               {navLinks.map((link, i) => (
-                <motion.a
+                <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 * i, duration: 0.4 }}
+                  transition={{ delay: 0.05 * i, duration: 0.3 }}
                   key={link.name}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-4xl font-display font-light text-white"
                 >
-                  {link.name}
-                </motion.a>
+                  <Link
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`text-3xl font-display font-medium ${
+                      location === link.href ? "text-primary" : "text-white"
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                </motion.div>
               ))}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.05 * navLinks.length, duration: 0.3 }}
+                className="mt-4"
+              >
+                <Link
+                  href="/contact"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="inline-block px-8 py-3 rounded-full bg-primary text-primary-foreground font-medium"
+                >
+                  Book a Strategy Call
+                </Link>
+              </motion.div>
             </nav>
           </motion.div>
         )}

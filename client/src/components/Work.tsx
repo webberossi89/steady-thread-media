@@ -1,84 +1,54 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
-import p1 from "@/assets/images/project1.png";
-import p2 from "@/assets/images/project2.png";
-import p3 from "@/assets/images/project3.png";
-
-const projects = [
-  {
-    id: 1,
-    title: "Aura Architecture",
-    category: "Branding & Spatial",
-    image: p1,
-    colSpan: "col-span-1 md:col-span-7",
-  },
-  {
-    id: 2,
-    title: "Void Syntax",
-    category: "Digital Art & Web",
-    image: p2,
-    colSpan: "col-span-1 md:col-span-5",
-  },
-  {
-    id: 3,
-    title: "Noir Collection",
-    category: "Art Direction & E-commerce",
-    image: p3,
-    colSpan: "col-span-1 md:col-span-12",
-  }
-];
+import { Link } from "wouter";
 
 export default function Work() {
   return (
-    <section id="work" className="py-24 md:py-32 bg-background">
-      <div className="container mx-auto px-6 md:px-12">
+    <section className="py-24 bg-background">
+      <div className="container mx-auto px-6 max-w-[1200px]">
         
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-24 gap-8">
-          <div>
-            <span className="uppercase tracking-[0.2em] text-xs font-medium text-white/50 mb-6 block">
-              Selected Works
-            </span>
-            <h2 className="text-5xl md:text-7xl font-display tracking-tight text-white">
-              Featured <span className="italic font-light text-white/50">Projects</span>
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+          <div className="max-w-3xl">
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
+              How we help
             </h2>
           </div>
           
-          <a href="#" className="flex items-center gap-3 text-sm font-medium uppercase tracking-wider text-white/70 hover:text-white transition-colors">
-            View All <ArrowRight size={16} />
-          </a>
+          <Link href="/services" className="px-6 py-3 rounded-full border border-white/20 hover:bg-white hover:text-black transition-colors duration-300 font-medium whitespace-nowrap">
+            Explore Services
+          </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
-          {projects.map((project, i) => (
-            <motion.div 
-              key={project.id}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7, delay: i * 0.1 }}
-              className={`group cursor-pointer ${project.colSpan}`}
-            >
-              <div className="relative overflow-hidden rounded-xl mb-6">
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-[60vh] object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-              </div>
-              <div className="flex justify-between items-center text-white">
-                <div>
-                  <h3 className="text-2xl font-display mb-1">{project.title}</h3>
-                  <p className="text-white/50 font-light">{project.category}</p>
-                </div>
-                <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all duration-300">
-                  <ArrowRight size={20} className="-rotate-45 group-hover:rotate-0 transition-transform duration-300" />
-                </div>
-              </div>
-            </motion.div>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-secondary p-10 rounded-xl flex flex-col h-full border border-white/5">
+            <h3 className="text-2xl font-display font-bold text-white mb-4">GTM Strategy</h3>
+            <p className="text-muted-foreground mb-8 flex-grow">
+              Positioning, ICP clarity, messaging, channel strategy
+            </p>
+            <Link href="/services" className="text-primary hover:text-[#E5C1FF] font-medium inline-flex items-center gap-2 transition-colors">
+              Learn more <span className="text-xl leading-none">→</span>
+            </Link>
+          </div>
+          
+          <div className="bg-secondary p-10 rounded-xl flex flex-col h-full border border-white/5">
+            <h3 className="text-2xl font-display font-bold text-white mb-4">Demand Generation</h3>
+            <p className="text-muted-foreground mb-8 flex-grow">
+              Campaign architecture, funnel planning, lead flow improvement
+            </p>
+            <Link href="/services" className="text-primary hover:text-[#E5C1FF] font-medium inline-flex items-center gap-2 transition-colors">
+              Learn more <span className="text-xl leading-none">→</span>
+            </Link>
+          </div>
+          
+          <div className="bg-secondary p-10 rounded-xl flex flex-col h-full border border-white/5">
+            <h3 className="text-2xl font-display font-bold text-white mb-4">Revenue Optimization</h3>
+            <p className="text-muted-foreground mb-8 flex-grow">
+              Sales-marketing alignment, conversion improvements, handoff process
+            </p>
+            <Link href="/services" className="text-primary hover:text-[#E5C1FF] font-medium inline-flex items-center gap-2 transition-colors">
+              Learn more <span className="text-xl leading-none">→</span>
+            </Link>
+          </div>
         </div>
-
       </div>
     </section>
   );
