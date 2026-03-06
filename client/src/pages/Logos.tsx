@@ -3,6 +3,9 @@ import Footer from "@/components/Footer";
 import logo1 from "@/assets/images/logo-option-1.png";
 import logo2 from "@/assets/images/logo-option-2.png";
 import logo3 from "@/assets/images/logo-option-3.png";
+import logo4 from "@/assets/images/logo-option-4.png";
+import logo5 from "@/assets/images/logo-option-5.png";
+import logo6 from "@/assets/images/logo-option-6.png";
 
 export default function Logos() {
   return (
@@ -14,7 +17,7 @@ export default function Logos() {
             Logo Options
           </h1>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
             <div className="bg-secondary p-8 rounded-2xl border border-white/10 text-center flex flex-col items-center">
               <h2 className="text-2xl font-display font-medium text-white mb-6">Option 1</h2>
               <p className="text-muted-foreground mb-8 text-sm h-12">Minimalist monogram logo combining S and T with a thread line.</p>
@@ -36,6 +39,32 @@ export default function Logos() {
               <p className="text-muted-foreground mb-8 text-sm h-12">Sophisticated continuous loop forming an abstract infinity thread symbol.</p>
               <div className="w-full aspect-square rounded-xl overflow-hidden border border-white/5 mb-6">
                 <img src={logo3} alt="Logo Option 3" className="w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="bg-secondary p-8 rounded-2xl border border-white/10 text-center flex flex-col items-center">
+              <h2 className="text-2xl font-display font-medium text-white mb-6">Option 4</h2>
+              <p className="text-muted-foreground mb-8 text-sm h-12">Clean tech aesthetic with intersecting geometric lines.</p>
+              <div className="w-full aspect-square rounded-xl overflow-hidden border border-white/5 mb-6">
+                <img src={logo4} alt="Logo Option 4" className="w-full h-full object-cover" />
+              </div>
+            </div>
+
+            <div className="bg-secondary p-8 rounded-2xl border border-white/10 text-center flex flex-col items-center">
+              <h2 className="text-2xl font-display font-medium text-white mb-6">Option 5</h2>
+              <p className="text-muted-foreground mb-8 text-sm h-12">Creative lettermark merging S and T into a smooth thread.</p>
+              <div className="w-full aspect-square rounded-xl overflow-hidden border border-white/5 mb-6">
+                <img src={logo5} alt="Logo Option 5" className="w-full h-full object-cover" />
+              </div>
+            </div>
+
+            <div className="bg-secondary p-8 rounded-2xl border border-white/10 text-center flex flex-col items-center">
+              <h2 className="text-2xl font-display font-medium text-white mb-6">Option 6</h2>
+              <p className="text-muted-foreground mb-8 text-sm h-12">Strategic target concept intertwined with a flowing thread line.</p>
+              <div className="w-full aspect-square rounded-xl overflow-hidden border border-white/5 mb-6">
+                <img src={logo6} alt="Logo Option 6" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
