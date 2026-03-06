@@ -1,81 +1,67 @@
 import { motion } from "framer-motion";
-import studioImg from "@/assets/images/about-studio.png";
 
 export default function About() {
-  const stats = [
-    { value: "40+", label: "Global Awards" },
-    { value: "12", label: "Years Experience" },
-    { value: "250+", label: "Projects Delivered" },
-  ];
-
   return (
-    <section id="about" className="py-24 md:py-32 bg-background relative z-10">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 items-center">
-          
-          <div className="lg:col-span-5 lg:col-start-1 order-2 lg:order-1">
+    <section className="py-24 bg-secondary relative">
+      <div className="container mx-auto px-6 max-w-[1200px] relative z-10">
+        <div className="max-w-3xl mb-20">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-tight"
+          >
+            Growth stalls when GTM lacks <span className="italic font-light text-primary/80">structure</span>
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            className="text-xl text-muted-foreground leading-relaxed"
+          >
+            Most growth issues are not caused by a lack of effort. They come from unclear messaging, weak process, and acquisition systems that do not work together.
+          </motion.p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            {
+              title: "Unclear positioning",
+              desc: "Your message isn't resonating with the right buyers, making acquisition harder than it needs to be."
+            },
+            {
+              title: "Inconsistent pipeline",
+              desc: "Lead flow is unpredictable, relying too heavily on one channel or irregular marketing spikes."
+            },
+            {
+              title: "Disconnected sales & marketing",
+              desc: "Marketing generates leads, but sales can't close them due to poor qualification or handoff friction."
+            }
+          ].map((item, i) => (
             <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl"
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.7, delay: i * 0.15, ease: [0.16, 1, 0.3, 1] }}
+              className="group relative bg-background border border-border p-10 rounded-[2rem] hover:border-primary/30 transition-all duration-500 hover:shadow-[0_10px_40px_-15px_rgba(240,214,255,0.1)] hover:-translate-y-2 overflow-hidden"
             >
-              <img 
-                src={studioImg} 
-                alt="Our Creative Studio" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black/20 mix-blend-overlay"></div>
+              <div className="absolute top-0 right-0 p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-x-4 -translate-y-4 group-hover:translate-x-0 group-hover:translate-y-0 text-primary/10">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 6v12M6 12h12" />
+                </svg>
+              </div>
+              
+              <div className="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-8 font-display font-bold text-xl group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-500">
+                {i + 1}
+              </div>
+              <h3 className="text-2xl font-display font-bold text-white mb-4">{item.title}</h3>
+              <p className="text-muted-foreground leading-relaxed relative z-10">{item.desc}</p>
             </motion.div>
-          </div>
-
-          <div className="lg:col-span-6 lg:col-start-7 order-1 lg:order-2 flex flex-col justify-center">
-            <motion.span 
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="uppercase tracking-[0.2em] text-xs font-medium text-white/50 mb-6 block"
-            >
-              The Studio
-            </motion.span>
-            
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-display leading-[1.1] mb-8 text-white"
-            >
-              We are a collective of <span className="italic font-light text-white/50">thinkers, designers,</span> and engineers.
-            </motion.h2>
-
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="text-lg text-white/60 mb-12 font-light leading-relaxed max-w-xl"
-            >
-              Based in London with a global mindset. We partner with ambitious leaders to build brands, digital products, and cinematic experiences that define tomorrow. We believe in design that moves people.
-            </motion.p>
-
-            <div className="grid grid-cols-3 gap-8 border-t border-white/10 pt-8">
-              {stats.map((stat, i) => (
-                <motion.div 
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 + (i * 0.1) }}
-                >
-                  <div className="text-3xl md:text-4xl font-display mb-2 text-white">{stat.value}</div>
-                  <div className="text-sm text-white/40">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
+          ))}
         </div>
       </div>
     </section>

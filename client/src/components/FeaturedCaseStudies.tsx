@@ -19,45 +19,65 @@ export default function FeaturedCaseStudies() {
   ];
 
   return (
-    <section className="py-24 bg-background border-t border-white/5">
-      <div className="container mx-auto px-6 max-w-[1200px]">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
-          <div>
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
+    <section className="py-32 bg-background relative overflow-hidden">
+      <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
+      
+      <div className="container mx-auto px-6 max-w-[1200px] relative z-10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+          <motion.div
+             initial={{ opacity: 0, x: -20 }}
+             whileInView={{ opacity: 1, x: 0 }}
+             viewport={{ once: true }}
+             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
               Selected work
             </h2>
-          </div>
-          <Link href="/case-studies" className="px-6 py-3 rounded-full border border-white/20 text-white hover:bg-white hover:text-black transition-colors duration-300 font-medium whitespace-nowrap flex items-center gap-2 group">
-            View Case Studies <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-          </Link>
+          </motion.div>
+          <motion.div
+             initial={{ opacity: 0, x: 20 }}
+             whileInView={{ opacity: 1, x: 0 }}
+             viewport={{ once: true }}
+             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <Link href="/case-studies" className="px-6 py-3 rounded-full border border-white/20 text-white hover:bg-white hover:text-black transition-colors duration-300 font-medium whitespace-nowrap flex items-center gap-2 group">
+              View Case Studies <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </motion.div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {caseStudies.map((study, i) => (
             <motion.div 
               key={i}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="bg-secondary p-10 rounded-2xl border border-white/5 flex flex-col"
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ delay: i * 0.15, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+              className="group bg-secondary p-10 md:p-12 rounded-[2rem] border border-white/5 flex flex-col hover:border-primary/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(240,214,255,0.05)]"
             >
-              <div className="mb-8">
-                <span className="inline-block px-4 py-1.5 rounded-full border border-secondary-foreground/20 text-sm font-medium text-secondary-foreground">{study.clientType}</span>
+              <div className="mb-10 flex justify-between items-center">
+                <span className="inline-block px-4 py-1.5 rounded-full bg-background border border-border text-sm font-medium text-white group-hover:border-primary/40 group-hover:text-primary transition-colors duration-500">
+                  {study.clientType}
+                </span>
+                <div className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:bg-primary group-hover:text-primary-foreground transform translate-x-4 group-hover:translate-x-0 transition-all duration-500">
+                  <ArrowRight size={16} className="-rotate-45" />
+                </div>
               </div>
               
-              <div className="space-y-6 flex-grow">
+              <div className="space-y-8 flex-grow">
                 <div>
-                  <h4 className="text-sm uppercase tracking-wider text-secondary-foreground/50 font-semibold mb-2">Challenge</h4>
-                  <p className="text-secondary-foreground text-lg">{study.challenge}</p>
+                  <h4 className="text-xs uppercase tracking-[0.15em] text-white/40 font-semibold mb-3">Challenge</h4>
+                  <p className="text-white text-xl md:text-2xl font-display">{study.challenge}</p>
                 </div>
+                <div className="w-full h-px bg-white/5 group-hover:bg-primary/10 transition-colors duration-500"></div>
                 <div>
-                  <h4 className="text-sm uppercase tracking-wider text-secondary-foreground/50 font-semibold mb-2">What we changed</h4>
-                  <p className="text-secondary-foreground/80">{study.changed}</p>
+                  <h4 className="text-xs uppercase tracking-[0.15em] text-white/40 font-semibold mb-3">What we changed</h4>
+                  <p className="text-white/70 leading-relaxed">{study.changed}</p>
                 </div>
-                <div>
-                  <h4 className="text-sm uppercase tracking-wider text-secondary-foreground/50 font-semibold mb-2">Outcome</h4>
-                  <p className="text-primary-foreground font-medium">{study.outcome}</p>
+                <div className="bg-background rounded-xl p-5 border border-white/5 group-hover:border-primary/20 transition-colors duration-500">
+                  <h4 className="text-xs uppercase tracking-[0.15em] text-white/40 font-semibold mb-2">Outcome</h4>
+                  <p className="text-primary font-medium text-lg">{study.outcome}</p>
                 </div>
               </div>
             </motion.div>
