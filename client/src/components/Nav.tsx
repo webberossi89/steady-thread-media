@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "wouter";
+import horizontalLogo from "@/assets/images/logo-horizontal.png";
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -32,8 +33,8 @@ export default function Nav() {
       }`}
     >
       <div className="container mx-auto px-6 max-w-[1200px] flex items-center justify-between">
-        <Link href="/" className="text-xl font-display font-bold tracking-tight z-50 relative text-white hover:text-primary transition-colors">
-          Steady Thread Media
+        <Link href="/" className="z-50 relative h-10 md:h-12 hover:opacity-80 transition-opacity">
+          <img src={horizontalLogo} alt="Steady Thread Media" className="h-full w-auto object-contain" />
         </Link>
 
         {/* Desktop Nav */}
