@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import verticalLogo from "@/assets/images/logo-vertical.png";
+import logoMark from "@/assets/images/logo-mark.png";
 
 export default function Footer() {
   return (
@@ -7,8 +7,11 @@ export default function Footer() {
       <div className="container mx-auto px-6 max-w-[1200px]">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-2">
-            <Link href="/" className="block mb-6 h-48 hover:opacity-80 transition-opacity">
-              <img src={verticalLogo} alt="Steady Thread Media" className="h-full w-auto object-contain object-left" />
+            <Link href="/" className="inline-flex flex-col items-start gap-4 mb-8 hover:opacity-80 transition-opacity">
+              <img src={logoMark} alt="Steady Thread Media Logo" className="h-16 w-16 object-contain" />
+              <span className="text-2xl font-display font-bold text-white">
+                Steady Thread Media
+              </span>
             </Link>
             <p className="text-muted-foreground max-w-sm mb-8">
               Strategic GTM systems for consistent B2B growth. We help companies clarify positioning and strengthen demand generation.

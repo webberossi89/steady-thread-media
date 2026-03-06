@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "wouter";
-import horizontalLogo from "@/assets/images/logo-horizontal.png";
+import logoMark from "@/assets/images/logo-mark.png";
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -23,7 +23,6 @@ export default function Nav() {
     { name: "Case Studies", href: "/case-studies" },
     { name: "Insights", href: "/insights" },
     { name: "About", href: "/about" },
-    { name: "Logos", href: "/logos" },
   ];
 
   return (
@@ -33,8 +32,11 @@ export default function Nav() {
       }`}
     >
       <div className="container mx-auto px-6 max-w-[1200px] flex items-center justify-between">
-        <Link href="/" className="z-50 relative h-16 md:h-20 hover:opacity-80 transition-opacity">
-          <img src={horizontalLogo} alt="Steady Thread Media" className="h-full w-auto object-contain" />
+        <Link href="/" className="z-50 relative flex items-center gap-3 hover:opacity-80 transition-opacity">
+          <img src={logoMark} alt="Steady Thread Media Logo" className="h-10 w-10 object-contain" />
+          <span className="text-xl font-display font-bold tracking-tight text-white hidden sm:block">
+            Steady Thread Media
+          </span>
         </Link>
 
         {/* Desktop Nav */}
