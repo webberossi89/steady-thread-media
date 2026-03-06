@@ -22,6 +22,7 @@ export default function Nav() {
     { name: "Case Studies", href: "/case-studies" },
     { name: "Insights", href: "/insights" },
     { name: "About", href: "/about" },
+    { name: "Logos", href: "/logos" },
   ];
 
   return (
