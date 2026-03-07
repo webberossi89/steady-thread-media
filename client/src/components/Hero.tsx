@@ -37,16 +37,16 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             >
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.05] tracking-tight mb-6">
-                You know who your target accounts are. The problem is <span className="text-primary relative inline-block whitespace-nowrap">
-                  getting in front of them.
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-display font-bold leading-[1.05] tracking-tight mb-8">
+                Strategic GTM systems for <span className="text-primary relative inline-block">
+                  consistent
                   <motion.div 
                     className="absolute -bottom-2 left-0 w-full h-[3px] bg-primary/40 rounded-full"
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
                   />
-                </span>
+                </span> B2B growth
               </h1>
             </motion.div>
 

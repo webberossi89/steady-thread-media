@@ -4,7 +4,7 @@ export default function About() {
   return (
     <section className="py-32 bg-background relative">
       <div className="container mx-auto px-6 max-w-[1200px] relative z-10">
-        <div className="max-w-3xl mb-20">
+        <div className="max-w-4xl mb-20">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -12,14 +12,22 @@ export default function About() {
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-tight"
           >
-            Growth stalls when you can't reach the accounts that <span className="italic font-light text-primary/80">matter</span>
+            You know who your target accounts are. The problem is <span className="text-primary relative inline-block">
+              getting in front of them.
+              <motion.div 
+                className="absolute -bottom-2 left-0 w-full h-[3px] bg-primary/40 rounded-full"
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
+              />
+            </span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="text-xl text-muted-foreground leading-relaxed"
+            className="text-xl text-muted-foreground leading-relaxed mt-10"
           >
             Most B2B revenue problems aren't caused by a bad product or weak demand. They come from not having a reliable system to get in front of the right people consistently.
           </motion.p>
