@@ -37,16 +37,16 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             >
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-display font-bold leading-[1.05] tracking-tight mb-8">
-                Strategic GTM systems for <span className="text-primary relative inline-block">
-                  consistent
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.05] tracking-tight mb-6">
+                You know who your target accounts are. The problem is <span className="text-primary relative inline-block whitespace-nowrap">
+                  getting in front of them.
                   <motion.div 
                     className="absolute -bottom-2 left-0 w-full h-[3px] bg-primary/40 rounded-full"
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
                   />
-                </span> B2B growth
+                </span>
               </h1>
             </motion.div>
 
@@ -55,8 +55,8 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             >
-              <p className="text-xl md:text-2xl text-white/70 max-w-2xl font-light leading-relaxed mb-10">
-                We help B2B companies build clearer positioning, stronger demand generation, and more effective go-to-market systems that create qualified opportunities.
+              <p className="text-lg md:text-xl text-white/70 max-w-2xl font-light leading-relaxed mb-10">
+                We build signal-based outbound and account-based marketing systems for B2B revenue teams that have a clear ICP but no consistent way to reach the right people and convert them into pipeline.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-5">
@@ -64,21 +64,17 @@ export default function Hero() {
                   href="/contact"
                   className="relative overflow-hidden group bg-primary text-primary-foreground px-8 py-4 rounded-full font-medium transition-all duration-300 text-center shadow-[0_0_20px_rgba(240,214,255,0.15)] hover:shadow-[0_0_30px_rgba(240,214,255,0.3)] hover:-translate-y-1"
                 >
-                  <span className="relative z-10">Book a Strategy Call</span>
+                  <span className="relative z-10">Book a GTM Assessment</span>
                   <div className="absolute inset-0 bg-[#E5C1FF] transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-out z-0"></div>
                 </Link>
                 <Link 
                   href="/approach"
                   className="bg-transparent text-white border border-white/20 px-8 py-4 rounded-full font-medium hover:bg-white/5 transition-all duration-300 text-center flex items-center justify-center gap-2 group hover:-translate-y-1"
                 >
-                  See Our Approach
+                  See How It Works
                   <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
-              
-              <p className="mt-10 text-xs text-primary/70 uppercase tracking-[0.15em] font-medium">
-                Trusted by B2B teams that need more clarity, better pipeline, and stronger execution.
-              </p>
             </motion.div>
           </div>
           
@@ -96,9 +92,9 @@ export default function Hero() {
                 <div className="relative z-10 flex flex-col gap-6">
                   {/* Flow items */}
                   {[
-                    { label: "Positioning", width: "w-2/3", delay: 0.5 },
-                    { label: "Demand", width: "w-full", delay: 0.7 },
-                    { label: "Pipeline", width: "w-5/6", delay: 0.9 }
+                    { label: "Identify Accounts", width: "w-1/3", delay: 0.5 },
+                    { label: "Capture Buying Signals", width: "w-2/3", delay: 0.7 },
+                    { label: "Targeted Outreach", width: "w-5/6", delay: 0.9 }
                   ].map((item, i) => (
                     <motion.div 
                       key={item.label}
@@ -131,7 +127,7 @@ export default function Hero() {
                     <div className="flex items-end justify-between">
                       <div>
                         <div className="text-xs text-primary/70 uppercase tracking-wider mb-1">Outcome</div>
-                        <div className="text-lg text-primary font-medium">Predictable Growth</div>
+                        <div className="text-lg text-primary font-medium">Qualified Pipeline</div>
                       </div>
                       <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
                         <ArrowRight size={14} className="text-primary" />

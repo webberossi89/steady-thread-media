@@ -1,0 +1,161 @@
+STEADY THREAD MEDIA
+Website Copy Rewrite
+Complete section-by-section copy for developer handoff
+March 2026
+
+How to use this document
+Each section below maps directly to a section on steadythreadmedia.com. Copy is written and ready to drop in. Notes on what to remove or replace are marked in italics.
+
+[ SECTION 1 ]
+Hero
+HEADLINE
+You know who your target accounts are. The problem is getting in front of them.
+SUBHEADLINE
+We build signal-based outbound and account-based marketing systems for B2B revenue teams that have a clear ICP but no consistent way to reach the right people and convert them into pipeline.
+PRIMARY CTA
+Book a GTM Assessment
+SECONDARY CTA
+See How It Works
+Remove: 'View GTM Roadmap' — reads as a PDF download, not a service page.
+
+[ SECTION 2 ]
+Stats Bar
+Remove: '92% Strategy Success Rate', '47% Faster GTM Velocity', '47% Faster Time-to-Market'. These read as fabricated. Replace with the four credibility markers below.
+
+$5M+  |  Pipeline generated for clients
+50+  |  B2B companies served
+Charlotte, NC  |  Serving teams across North America
+Clay  |  HubSpot  |  LinkedIn Certified
+If you have real per-client numbers (meetings booked, reply rates, pipeline per engagement), use those instead. Specificity beats percentages every time.
+
+[ SECTION 3 ]
+Problem Section
+HEADLINE
+Growth stalls when you can't reach the accounts that matter.
+BODY
+Most B2B revenue problems aren't caused by a bad product or weak demand. They come from not having a reliable system to get in front of the right people consistently.
+
+1. No consistent outbound motion
+You have a target list but no systematic way to work it. Pipeline comes from referrals, warm intros, and occasional bursts of activity, not a repeatable system.
+2. Outreach that doesn't convert
+Messages go out but replies don't come back. The problem isn't volume, it's relevance. Generic outreach to the right accounts still gets ignored.
+3. No signal on when accounts are ready
+You're reaching out blind with no visibility into which target accounts are showing buying intent, researching solutions, or experiencing the triggers that make them ready to buy now.
+
+[ SECTION 4 ]
+Who We Work With
+HEADLINE
+Built for B2B teams that know their ICP but can't convert it into pipeline.
+
+•	B2B SaaS companies with ACV above $15K
+•	Revenue teams moving off referral-dependent growth
+•	Founders and marketing leaders who need outbound that actually works
+•	Companies running outreach but seeing low reply and conversion rates
+•	Teams that want ABM but don't have the infrastructure to execute it
+Remove the current broad ICP list (SaaS + technical founders + service businesses). That's no one specific. The list above self-selects the right buyer.
+
+[ SECTION 5 ]
+Services Section
+SECTION HEADLINE
+How we get you in front of the right accounts
+
+01	Signal-Based Account Targeting
+We identify which of your target accounts are showing buying signals right now — using behavioral data, trigger events, and intent indicators to prioritize outreach around accounts that are actually ready.
+
+02	AI-Powered Outbound Systems
+We build outbound infrastructure using Clay, Smartlead, and HeyReach that researches, personalizes, and sequences outreach at scale without sacrificing relevance. Not spray and pray. Targeted, triggered, and systematic.
+
+03	Account-Based Marketing
+We run tiered ABM programs that build awareness and relationship with your target accounts before the pitch. Multi-channel, buying committee aware, and designed to create inbound pull from the accounts you've been trying to reach outbound.
+
+04	CRM and Revenue Operations
+We connect your outbound motion to HubSpot with proper lead scoring, handoff workflows, and pipeline reporting so nothing falls through the cracks and sales knows exactly who to prioritize.
+
+[ SECTION 6 ]
+Process Section
+SECTION HEADLINE
+How it works
+
+01  Account Intelligence Audit
+We map your target account list against available signal data to identify which accounts are showing intent, which triggers indicate readiness, and where your current outreach is breaking down.
+02  System Architecture
+We design your outbound and ABM infrastructure — account tiers, signal tracking, messaging frameworks, and channel sequencing built around how your buyers actually behave.
+03  Build and Launch
+We implement the full system: Clay enrichment workflows, email and LinkedIn sequences, ABM campaign structure, CRM configuration, and tracking. You get a system, not a strategy doc.
+04  Optimize and Scale
+We run weekly reviews against pipeline data, refine scoring and messaging based on what's converting, and expand what's working. The system compounds over time.
+
+[ SECTION 7 ]
+Tech Stack Section
+SECTION HEADLINE
+The tools behind the system
+SECTION SUBHEAD
+We don't resell software. We build the workflows that make these tools actually generate pipeline.
+
+Clay	Account enrichment, signal aggregation, and AI-powered research at scale
+Smartlead	Email sequencing built around trigger-based timing, not batch sends
+HeyReach	LinkedIn outreach coordinated with email for true multi-channel coverage
+HubSpot	CRM infrastructure with lead scoring, routing, and pipeline visibility
+Webflow / Lovable	Landing pages and ABM assets built for account-specific personalization
+
+[ SECTION 8 ]
+Pricing / Engagement Section
+Remove: The current two-tier retainer pricing with feature lists. It reads like a SaaS pricing page and commoditizes your work. Replace with engagement types below.
+SECTION HEADLINE
+How we engage
+
+GTM Sprint
+90-day engagement to build your outbound system from the ground up. Account targeting, signal infrastructure, messaging, and sequences. Priced on scope.
+BEST FOR
+Teams with zero outbound motion who need a system built fast.
+
+Ongoing GTM Partner
+Monthly retainer for teams that need continued execution, optimization, and pipeline support. ABM campaigns, outbound management, CRM operations, and weekly reporting.
+BEST FOR
+Teams with an existing motion that needs to be systematized and scaled.
+
+ABM Program
+Dedicated account-based marketing for teams targeting a defined list of high-value accounts. Full buying committee strategy, multi-channel execution, and account progression tracking.
+BEST FOR
+Teams with a named account list and enterprise deal sizes that need a true ABM program, not better cold outreach.
+
+CTA ON EACH OPTION
+Book a Strategy Call
+
+[ SECTION 9 ]
+Case Studies / Results Section
+The current case study company names (TechFlow Solutions, DataSync Platform, CloudBridge Analytics) read as placeholders. Use real client names when available or remove until you can. Format below is what each case study should follow.
+
+Case Study Format
+Company / Industry	[Client name], [Industry]
+Challenge	Could not reach target accounts despite having a clear ICP and target list.
+What We Changed	Built signal-based account targeting layer, deployed Clay enrichment workflows, launched coordinated email and LinkedIn sequences tied to buying trigger events.
+Outcome	X meetings booked in 90 days. $Xm in pipeline from target account list.
+
+[ SECTION 10 ]
+Testimonials
+Current testimonials (Sarah Chen, Marcus Rodriguez, Jennifer Kim) read as AI-generated placeholders and will actively hurt credibility. Recommendation: remove this section entirely until you have real, named, verifiable quotes from actual clients.
+
+When you do have real quotes, the format should be:
+
+Quote: A specific outcome in their words. Not 'Steady Thread is amazing.' Something like: 'We went from 0 structured outbound to 12 qualified meetings in the first 60 days.'
+Attribution: Full name, exact title, company name — real and verifiable.
+
+[ SECTION 11 ]
+Closing CTA Section
+HEADLINE
+You already know who you want to close. Let's build the system to get you in front of them.
+BODY
+We'll start with a GTM assessment to identify exactly where your current outreach is breaking down and what a signal-based system would look like for your specific account list and sales motion.
+CTA
+Book Your GTM Assessment
+
+[ APPENDIX ]
+Priority Implementation Order
+If you implement nothing else, do these three first:
+
+•	Hero headline and subhead — this is where you're losing the right buyers immediately
+•	Remove the fabricated stats and placeholder testimonials — they undermine everything else
+•	Rename and reposition the services section to reflect your actual methodology
+
+Steady Thread Media  |  steadythreadmedia.com  |  March 2026

@@ -29,19 +29,19 @@ export default function Contact() {
           {/* Internal hover glow */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none animate-float-centered"></div>
 
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-[1.1]">
-            Need a clearer path to <span className="italic font-light text-primary">qualified growth?</span>
+          <h2 className="text-4xl md:text-5xl lg:text-7xl font-display font-bold text-white mb-6 leading-[1.1]">
+            You already know who you want to close. Let's build the system to <span className="italic font-light text-primary">get you in front of them.</span>
           </h2>
           
-          <p className="text-xl text-white/60 mb-12 max-w-2xl mx-auto font-light">
-            Let's identify where your GTM strategy is breaking down and what to fix first.
+          <p className="text-xl text-white/60 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+            We'll start with a GTM assessment to identify exactly where your current outreach is breaking down and what a signal-based system would look like for your specific account list and sales motion.
           </p>
 
           <Link 
             href="/contact"
             className="inline-block relative overflow-hidden group/btn bg-primary text-primary-foreground px-10 py-5 rounded-full text-lg font-medium shadow-[0_0_20px_rgba(240,214,255,0.2)] hover:shadow-[0_0_40px_rgba(240,214,255,0.4)] hover:-translate-y-1 transition-all duration-300"
           >
-            <span className="relative z-10">Book a Strategy Call</span>
+            <span className="relative z-10">Book Your GTM Assessment</span>
             <div className="absolute inset-0 bg-[#E5C1FF] transform scale-x-0 origin-left group-hover/btn:scale-x-100 transition-transform duration-500 ease-out z-0"></div>
           </Link>
         </motion.div>

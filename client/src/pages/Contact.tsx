@@ -45,7 +45,7 @@ export default function ContactPage() {
                 </div>
 
                 <button type="button" className="w-full bg-primary hover:bg-[#E5C1FF] text-primary-foreground font-bold py-4 rounded-full transition-colors">
-                  Book a Strategy Call
+                  Book a GTM Assessment
                 </button>
               </form>
             </div>

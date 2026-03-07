@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Work() {
   return (
-    <section className="py-32 bg-secondary relative">
+    <section className="py-32 bg-background relative">
       <div className="container mx-auto px-6 max-w-[1200px] relative z-10">
         
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
@@ -13,10 +13,10 @@ export default function Work() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="max-w-2xl"
+            className="max-w-3xl"
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
-              How we help
+              How we get you in front of the right accounts
             </h2>
           </motion.div>
           
@@ -32,19 +32,27 @@ export default function Work() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {[
             {
-              title: "GTM Strategy",
-              desc: "Positioning, ICP clarity, messaging, channel strategy"
+              number: "01",
+              title: "Signal-Based Account Targeting",
+              desc: "We identify which of your target accounts are showing buying signals right now — using behavioral data, trigger events, and intent indicators to prioritize outreach around accounts that are actually ready."
             },
             {
-              title: "Demand Generation",
-              desc: "Campaign architecture, funnel planning, lead flow improvement"
+              number: "02",
+              title: "AI-Powered Outbound Systems",
+              desc: "We build outbound infrastructure using Clay, Smartlead, and HeyReach that researches, personalizes, and sequences outreach at scale without sacrificing relevance. Not spray and pray. Targeted, triggered, and systematic."
             },
             {
-              title: "Revenue Optimization",
-              desc: "Sales-marketing alignment, conversion improvements, handoff process"
+              number: "03",
+              title: "Account-Based Marketing",
+              desc: "We run tiered ABM programs that build awareness and relationship with your target accounts before the pitch. Multi-channel, buying committee aware, and designed to create inbound pull from the accounts you've been trying to reach outbound."
+            },
+            {
+              number: "04",
+              title: "CRM and Revenue Operations",
+              desc: "We connect your outbound motion to HubSpot with proper lead scoring, handoff workflows, and pipeline reporting so nothing falls through the cracks and sales knows exactly who to prioritize."
             }
           ].map((service, i) => (
             <motion.div 
@@ -53,13 +61,14 @@ export default function Work() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.7, delay: i * 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="group bg-background p-10 rounded-[2rem] flex flex-col h-full border border-border relative overflow-hidden hover:border-primary/40 hover:-translate-y-2 transition-all duration-500 hover:shadow-[0_20px_40px_-15px_rgba(240,214,255,0.1)]"
+              className="group bg-secondary p-10 md:p-12 rounded-[2rem] flex flex-col h-full border border-white/5 relative overflow-hidden hover:border-primary/40 hover:-translate-y-2 transition-all duration-500 hover:shadow-[0_20px_40px_-15px_rgba(240,214,255,0.1)]"
             >
               {/* Subtle gradient hover effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 
+              <div className="text-primary font-display font-bold text-xl mb-6">{service.number}</div>
               <h3 className="text-2xl font-display font-bold text-white mb-4 relative z-10">{service.title}</h3>
-              <p className="text-muted-foreground mb-10 flex-grow relative z-10 leading-relaxed">
+              <p className="text-muted-foreground mb-10 flex-grow relative z-10 leading-relaxed text-sm md:text-base">
                 {service.desc}
               </p>
               

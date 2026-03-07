@@ -4,28 +4,28 @@ export default function Framework() {
   const steps = [
     {
       number: "01",
-      title: "Diagnose",
-      description: "Audit current funnel, messaging, and GTM gaps"
+      title: "Account Intelligence Audit",
+      description: "We map your target account list against available signal data to identify which accounts are showing intent, which triggers indicate readiness, and where your current outreach is breaking down."
     },
     {
       number: "02",
-      title: "Clarify",
-      description: "Refine offer, audience, and market position"
+      title: "System Architecture",
+      description: "We design your outbound and ABM infrastructure — account tiers, signal tracking, messaging frameworks, and channel sequencing built around how your buyers actually behave."
     },
     {
       number: "03",
-      title: "Build",
-      description: "Create channel and conversion systems"
+      title: "Build and Launch",
+      description: "We implement the full system: Clay enrichment workflows, email and LinkedIn sequences, ABM campaign structure, CRM configuration, and tracking. You get a system, not a strategy doc."
     },
     {
       number: "04",
-      title: "Optimize",
-      description: "Improve performance with data and feedback loops"
+      title: "Optimize and Scale",
+      description: "We run weekly reviews against pipeline data, refine scoring and messaging based on what's converting, and expand what's working. The system compounds over time."
     }
   ];
 
   return (
-    <section className="py-32 bg-background relative overflow-hidden">
+    <section className="py-32 bg-background relative overflow-hidden border-t border-white/5">
       {/* Abstract curved background line */}
       <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-30" viewBox="0 0 1440 600" preserveAspectRatio="none">
         <motion.path 
@@ -56,7 +56,7 @@ export default function Framework() {
           className="mb-20 text-center max-w-3xl mx-auto"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
-            The Steady Thread framework
+            How it works
           </h2>
         </motion.div>
 
@@ -86,7 +86,7 @@ export default function Framework() {
                   {step.number}
                 </div>
                 <h3 className="text-2xl font-display font-bold text-white mb-3 group-hover:text-primary transition-colors">{step.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{step.description}</p>
+                <p className="text-muted-foreground leading-relaxed text-sm">{step.description}</p>
               </div>
             </motion.div>
           ))}

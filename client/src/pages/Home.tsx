@@ -5,8 +5,9 @@ import Audience from "@/components/Audience";
 import Work from "@/components/Work";
 import Framework from "@/components/Framework";
 import Results from "@/components/Results";
+import TechStack from "@/components/TechStack";
+import Pricing from "@/components/Pricing";
 import FeaturedCaseStudies from "@/components/FeaturedCaseStudies";
-import FeaturedInsights from "@/components/FeaturedInsights";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -16,13 +17,14 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
+        <Results />
         <About />
         <Audience />
         <Work />
         <Framework />
-        <Results />
+        <TechStack />
+        <Pricing />
         <FeaturedCaseStudies />
-        <FeaturedInsights />
         <Contact />
       </main>
       <Footer />

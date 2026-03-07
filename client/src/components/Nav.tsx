@@ -56,7 +56,7 @@ export default function Nav() {
             href="/contact"
             className="ml-4 px-5 py-2.5 rounded-full bg-primary text-primary-foreground hover:bg-[#E5C1FF] transition-colors duration-200 text-sm font-medium"
           >
-            Book a Strategy Call
+            Book a GTM Assessment
           </Link>
         </nav>
 
@@ -109,7 +109,7 @@ export default function Nav() {
                   onClick={() => setMobileMenuOpen(false)}
                   className="inline-block px-8 py-3 rounded-full bg-primary text-primary-foreground font-medium"
                 >
-                  Book a Strategy Call
+                  Book a GTM Assessment
                 </Link>
               </motion.div>
             </nav>
