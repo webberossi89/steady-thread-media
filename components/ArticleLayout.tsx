@@ -19,21 +19,38 @@ const muted = "rgba(255,255,255,0.55)";
 const border = "rgba(255,255,255,0.07)";
 
 export default function ArticleLayout({ children, meta }: ArticleLayoutProps) {
+  const canonicalUrl = `https://steadythreadmedia.com/insights/${meta.slug}`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: meta.title,
     description: meta.description,
+    url: canonicalUrl,
     datePublished: meta.dateISO,
+    dateModified: meta.dateISO,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": canonicalUrl,
+    },
+    image: {
+      "@type": "ImageObject",
+      url: "https://steadythreadmedia.com/opengraph-image.png",
+      width: 1200,
+      height: 630,
+    },
     author: {
-      "@type": "Organization",
-      name: "Steady Thread Media",
-      url: "https://steadythreadmedia.com",
+      "@type": "Person",
+      name: "Jared Webber",
+      url: "https://steadythreadmedia.com/about",
     },
     publisher: {
       "@type": "Organization",
       name: "Steady Thread Media",
       url: "https://steadythreadmedia.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://steadythreadmedia.com/favicon.svg",
+      },
     },
   };
 

@@ -11,6 +11,7 @@ export const metadata: Metadata = {
       "There are hundreds of intent signals. Most are noise. These four consistently correlate with pipeline from outbound — and here's how to capture them automatically.",
     type: "article",
     publishedTime: "2025-01-15T00:00:00Z",
+    url: "https://steadythreadmedia.com/insights/buying-signals-b2b-pipeline",
   },
   alternates: {
     canonical: "https://steadythreadmedia.com/insights/buying-signals-b2b-pipeline",

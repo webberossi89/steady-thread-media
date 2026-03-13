@@ -11,6 +11,7 @@ export const metadata: Metadata = {
       "If your CRM can't tell you which outbound activity generated pipeline, you're flying blind. The 6 HubSpot setup mistakes that break attribution — and how to fix them.",
     type: "article",
     publishedTime: "2025-04-15T00:00:00Z",
+    url: "https://steadythreadmedia.com/insights/hubspot-outbound-attribution",
   },
   alternates: {
     canonical: "https://steadythreadmedia.com/insights/hubspot-outbound-attribution",

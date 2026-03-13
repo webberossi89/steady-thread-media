@@ -11,6 +11,7 @@ export const metadata: Metadata = {
       "Clay has a learning curve and a real cost. Here's how to calculate whether it's worth it for your outbound volume — with actual numbers, not hype.",
     type: "article",
     publishedTime: "2025-02-20T00:00:00Z",
+    url: "https://steadythreadmedia.com/insights/clay-vs-manual-research",
   },
   alternates: {
     canonical: "https://steadythreadmedia.com/insights/clay-vs-manual-research",

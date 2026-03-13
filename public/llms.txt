@@ -1,0 +1,41 @@
+# Steady Thread Media
+
+> Steady Thread Media is a GTM engineering agency based in Charlotte, NC. We build signal-based outbound systems, account-based marketing infrastructure, and CRM/RevOps pipelines for B2B revenue teams that need consistent, predictable pipeline.
+
+## About
+
+Steady Thread Media was founded by Jared Webber, a GTM engineer with a background in marketing, demand generation, and agency-side B2B work. The agency specializes in implementing the data infrastructure and automation systems that enable modern outbound go-to-market motions — not just strategy, but the actual systems.
+
+Core services include:
+- Signal-based outbound targeting using tools like Clay, Apollo, and LinkedIn Sales Navigator
+- AI-powered outbound personalization and sequence automation
+- Account-based marketing (ABM) program design and execution
+- CRM configuration, RevOps setup, and pipeline attribution (primarily HubSpot)
+
+## Key Pages
+
+- [Home](https://steadythreadmedia.com/): Agency overview, services summary, and case study highlights
+- [Services](https://steadythreadmedia.com/services): Detailed breakdown of all four service areas
+- [Approach](https://steadythreadmedia.com/approach): The agency's methodology for building GTM systems
+- [Case Studies](https://steadythreadmedia.com/case-studies): Client results and engagement examples
+- [About](https://steadythreadmedia.com/about): Founder background and company story
+- [Contact](https://steadythreadmedia.com/contact): Book a GTM assessment
+
+## Insights (Articles)
+
+- [What Is a GTM Engineer?](https://steadythreadmedia.com/insights/what-is-a-gtm-engineer): Explains the GTM engineer role — what they do, why it exists, and how it differs from RevOps
+- [The 4 Buying Signals That Drive B2B Pipeline](https://steadythreadmedia.com/insights/buying-signals-b2b-pipeline): Covers the four intent signals that correlate most with outbound pipeline and how to automate them
+- [Clay vs. Manual Research](https://steadythreadmedia.com/insights/clay-vs-manual-research): ROI analysis of using Clay for outbound enrichment vs. manual BDR research
+- [HubSpot Configuration Mistakes That Kill Outbound Attribution](https://steadythreadmedia.com/insights/hubspot-outbound-attribution): Six common HubSpot setup errors that make outbound invisible in CRM reporting
+- [Why ABM Fails for Most B2B SaaS Companies](https://steadythreadmedia.com/insights/why-abm-fails-b2b-saas): Root causes of ABM failure and what prerequisites must be in place for it to work
+- [The Referral Trap](https://steadythreadmedia.com/insights/referral-trap-warm-intros): Why referral-dependent pipeline is fragile and what to build before the warm intros dry up
+
+## Topics Covered
+
+GTM engineering, outbound sales systems, account-based marketing, signal-based targeting, intent data, Clay.com, HubSpot, CRM configuration, RevOps, pipeline attribution, B2B sales, demand generation, lead enrichment, buying signals, ICP definition, cold outbound, founder-led sales
+
+## Contact
+
+- Website: https://steadythreadmedia.com
+- Location: Charlotte, NC (serves teams across North America)
+- Book a GTM Assessment: https://steadythreadmedia.com/contact

@@ -32,6 +32,11 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Steady Thread Media — GTM Engineering Agency",
+    description: "Signal-based outbound and ABM systems for B2B revenue teams that need consistent pipeline.",
+  },
   alternates: {
     canonical: "https://steadythreadmedia.com",
   },
@@ -43,6 +48,26 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Steady Thread Media",
+              url: "https://steadythreadmedia.com",
+              logo: "https://steadythreadmedia.com/favicon.svg",
+              description: "GTM engineering agency building signal-based outbound and account-based marketing systems for B2B revenue teams.",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Charlotte",
+                addressRegion: "NC",
+                addressCountry: "US",
+              },
+              sameAs: [],
+            }),
+          }}
+        />
         <Script
           id="gtm-script"
           strategy="afterInteractive"

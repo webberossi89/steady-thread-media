@@ -11,6 +11,7 @@ export const metadata: Metadata = {
       "Referral-dependent growth feels great until it stops. The warning signs your B2B pipeline is fragile — and what to build before the warm intros dry up.",
     type: "article",
     publishedTime: "2025-06-03T00:00:00Z",
+    url: "https://steadythreadmedia.com/insights/referral-trap-warm-intros",
   },
   alternates: {
     canonical: "https://steadythreadmedia.com/insights/referral-trap-warm-intros",

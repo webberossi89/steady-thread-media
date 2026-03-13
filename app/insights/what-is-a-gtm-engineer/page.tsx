@@ -11,6 +11,7 @@ export const metadata: Metadata = {
       "GTM engineers sit at the intersection of sales, marketing, and data. Here's exactly what they do, why the role exists, and whether your company needs one.",
     type: "article",
     publishedTime: "2025-03-10T00:00:00Z",
+    url: "https://steadythreadmedia.com/insights/what-is-a-gtm-engineer",
   },
   alternates: {
     canonical: "https://steadythreadmedia.com/insights/what-is-a-gtm-engineer",

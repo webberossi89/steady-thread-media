@@ -11,6 +11,7 @@ export const metadata: Metadata = {
       "ABM isn't a tool — it's a motion. Most B2B SaaS teams fail at account-based marketing because they try to run it without the prerequisites in place. Here's the honest framework.",
     type: "article",
     publishedTime: "2025-05-08T00:00:00Z",
+    url: "https://steadythreadmedia.com/insights/why-abm-fails-b2b-saas",
   },
   alternates: {
     canonical: "https://steadythreadmedia.com/insights/why-abm-fails-b2b-saas",
