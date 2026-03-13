@@ -32,15 +32,13 @@ export default function Footer() {
               marginBottom: "12px",
             }}
           >
-            <svg width="16" height="16" viewBox="0 0 18 18" fill="none">
-              <path
-                d="M9 1L9 17M1 9L17 9M3.22 3.22L14.78 14.78M14.78 3.22L3.22 14.78"
-                stroke="white"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-              />
+            <svg width="130" height="28" viewBox="0 0 130 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="14" cy="14" r="7" stroke="#e8d5ff" strokeWidth="1.25" fill="none"/>
+              <circle cx="14" cy="14" r="2" fill="#e8d5ff"/>
+              <line x1="21" y1="14" x2="28" y2="14" stroke="#e8d5ff" strokeWidth="1.25" strokeLinecap="round"/>
+              <text x="36" y="11" fill="white" fontFamily="Inter, sans-serif" fontWeight="600" fontSize="11" letterSpacing="-0.2">Steady Thread</text>
+              <text x="36" y="23" fill="rgba(232,213,255,0.7)" fontFamily="Inter, sans-serif" fontWeight="300" fontSize="8" letterSpacing="0.22em">MEDIA</text>
             </svg>
-            <span style={{ fontWeight: 600, fontSize: "14px" }}>Steady Thread Media</span>
           </Link>
           <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.45)", lineHeight: "1.6", maxWidth: "220px" }}>
             GTM systems for B2B revenue teams. Based in Charlotte, NC.
