@@ -21,6 +21,7 @@ const services = [
       "Most outbound fails because it's timed wrong, not written wrong. We build the data infrastructure to identify which accounts in your target list are showing real buying signals right now — job postings, funding events, tech stack changes, intent data spikes, and behavioral triggers that indicate readiness.",
       "You get a prioritized, signal-ranked account list updated continuously, so your team always knows where to focus.",
     ],
+    readMore: { label: "The 4 buying signals that actually drive pipeline →", href: "/insights/buying-signals-b2b-pipeline" },
     deliverables: [
       "Target account list mapped against signal sources",
       "Intent data integration (G2, Bombora, or similar)",
@@ -38,6 +39,7 @@ const services = [
       "We build the full outbound engine: Clay-powered research workflows that pull context on every account and contact, AI-generated messaging that actually reflects what's happening at the company right now, and sequencing infrastructure that coordinates email and LinkedIn in a way that feels human.",
       "Not spray and pray. Triggered, targeted, and systematic — built to run without constant manual intervention.",
     ],
+    readMore: { label: "Clay vs. manual research: the real ROI →", href: "/insights/clay-vs-manual-research" },
     deliverables: [
       "Clay enrichment and AI personalization workflow",
       "Email sequencing in Smartlead with trigger-based timing",
@@ -55,6 +57,7 @@ const services = [
       "Cold outreach to enterprise accounts doesn't work because you're unknown. ABM flips the sequence — we build awareness and relationship with your target accounts across channels before your team ever reaches out, so when outbound lands, it lands warm.",
       "We run tiered programs based on account priority: high-touch 1:1 ABM for named accounts, 1:few for account clusters, and 1:many for the broader target list.",
     ],
+    readMore: null,
     deliverables: [
       "Account tiering framework and prioritization model",
       "Multi-channel campaign architecture (LinkedIn, email, content)",
@@ -72,6 +75,7 @@ const services = [
       "A great outbound system that feeds into a disorganized CRM is wasted work. We configure HubSpot to match how your team actually sells — proper lead scoring, lifecycle stage automation, handoff workflows between marketing and sales, and pipeline reporting that shows what's actually driving revenue.",
       "We also build the dashboards your team will actually use: pipeline by source, outbound performance, account engagement, and sequence metrics.",
     ],
+    readMore: null,
     deliverables: [
       "HubSpot CRM configuration and clean-up",
       "Lead scoring model tied to ICP fit and engagement signals",
@@ -215,6 +219,24 @@ export default function ServicesPage() {
                     {p}
                   </p>
                 ))}
+
+                {/* Related article link */}
+                {service.readMore && (
+                  <Link
+                    href={service.readMore.href}
+                    className="link-muted"
+                    style={{
+                      display: "inline-block",
+                      fontSize: "13px",
+                      color: accent,
+                      textDecoration: "none",
+                      marginTop: "4px",
+                      marginBottom: "8px",
+                    }}
+                  >
+                    {service.readMore.label}
+                  </Link>
+                )}
 
                 {/* Tools */}
                 <div style={{ marginTop: "24px" }}>

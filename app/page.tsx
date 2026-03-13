@@ -470,27 +470,31 @@ export default function Home() {
                 num: "01",
                 title: "Signal-Based Account Targeting",
                 body: "We identify which of your target accounts are showing buying signals right now — using behavioral data, trigger events, and intent indicators to prioritize outreach.",
+                article: { label: "The 4 signals that drive pipeline →", href: "/insights/buying-signals-b2b-pipeline" },
               },
               {
                 num: "02",
                 title: "AI-Powered Outbound Systems",
                 body: "We build outbound infrastructure using Clay, Smartlead, and HeyReach that researches, personalizes, and sequences outreach at scale without sacrificing relevance.",
+                article: { label: "Clay vs. manual research: real ROI →", href: "/insights/clay-vs-manual-research" },
               },
               {
                 num: "03",
                 title: "Account-Based Marketing",
                 body: "We run tiered ABM programs that build awareness with your target accounts before the pitch. Multi-channel, buying committee aware, designed to create inbound pull.",
+                article: null,
               },
               {
                 num: "04",
                 title: "CRM and Revenue Operations",
                 body: "We connect your outbound motion to HubSpot with proper lead scoring, handoff workflows, and pipeline reporting so nothing falls through the cracks.",
+                article: null,
               },
             ].map((service) => (
               <div
                 key={service.num}
                 className="card-hover"
-              style={{
+                style={{
                   backgroundColor: card,
                   border: `1px solid ${border}`,
                   borderRadius: "16px",
@@ -500,42 +504,25 @@ export default function Home() {
                   gap: "12px",
                 }}
               >
-                <p
-                  style={{
-                    fontSize: "11px",
-                    fontWeight: 600,
-                    color: accent,
-                    letterSpacing: "0.06em",
-                  }}
-                >
+                <p style={{ fontSize: "11px", fontWeight: 600, color: accent, letterSpacing: "0.06em" }}>
                   {service.num}
                 </p>
-                <h3
-                  style={{
-                    fontSize: "16px",
-                    fontWeight: 600,
-                    lineHeight: 1.3,
-                  }}
-                >
+                <h3 style={{ fontSize: "16px", fontWeight: 600, lineHeight: 1.3 }}>
                   {service.title}
                 </h3>
-                <p
-                  style={{
-                    fontSize: "13px",
-                    color: muted,
-                    lineHeight: 1.7,
-                    flexGrow: 1,
-                  }}
-                >
+                <p style={{ fontSize: "13px", color: muted, lineHeight: 1.7, flexGrow: 1 }}>
                   {service.body}
                 </p>
-                <Link
-                  href="/services"
-                  className="link-muted"
-                  style={{ fontSize: "13px", color: muted, textDecoration: "none" }}
-                >
-                  Learn more →
-                </Link>
+                <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                  <Link href="/services" className="link-muted" style={{ fontSize: "13px", color: muted, textDecoration: "none" }}>
+                    Learn more →
+                  </Link>
+                  {service.article && (
+                    <Link href={service.article.href} className="link-muted" style={{ fontSize: "12px", color: "rgba(232,213,255,0.6)", textDecoration: "none" }}>
+                      {service.article.label}
+                    </Link>
+                  )}
+                </div>
               </div>
             ))}
           </div>
@@ -732,6 +719,31 @@ export default function Home() {
                 </span>
               )
             )}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Insights strip ───────────────────────────────── */}
+      <section style={{ padding: "80px 24px", borderTop: `1px solid ${border}` }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "32px", flexWrap: "wrap", gap: "12px" }}>
+            <p style={{ fontSize: "11px", fontWeight: 600, letterSpacing: "0.1em", color: muted, textTransform: "uppercase" }}>From the Insights</p>
+            <Link href="/insights" className="link-muted" style={{ fontSize: "13px", color: muted, textDecoration: "none" }}>View all →</Link>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "16px" }}>
+            {[
+              { category: "GTM Strategy", title: "What Is a GTM Engineer?", href: "/insights/what-is-a-gtm-engineer" },
+              { category: "Outbound Systems", title: "Clay vs. Manual Research: The Real ROI", href: "/insights/clay-vs-manual-research" },
+              { category: "Account Intelligence", title: "The 4 Buying Signals That Drive Pipeline", href: "/insights/buying-signals-b2b-pipeline" },
+            ].map((post) => (
+              <Link key={post.href} href={post.href} style={{ textDecoration: "none", color: "inherit" }}>
+                <div className="card-hover" style={{ backgroundColor: card, border: `1px solid ${border}`, borderRadius: "12px", padding: "20px 24px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                  <span style={{ fontSize: "10px", fontWeight: 600, color: accent, letterSpacing: "0.06em", textTransform: "uppercase" }}>{post.category}</span>
+                  <p style={{ fontSize: "14px", fontWeight: 500, lineHeight: 1.4 }}>{post.title}</p>
+                  <span style={{ fontSize: "12px", color: muted }}>Read →</span>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
