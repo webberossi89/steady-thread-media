@@ -334,8 +334,8 @@ export default function AboutPage() {
             {/* Avatar */}
             <div
               style={{
-                width: "88px",
-                height: "88px",
+                width: "160px",
+                height: "160px",
                 borderRadius: "50%",
                 overflow: "hidden",
                 border: `1px solid ${border}`,
@@ -345,9 +345,9 @@ export default function AboutPage() {
               <Image
                 src="/jared-webber.jpg"
                 alt="Jared Webber"
-                width={88}
-                height={88}
-                style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                width={160}
+                height={160}
+                style={{ objectFit: "cover", objectPosition: "center 15%", width: "100%", height: "100%" }}
               />
             </div>
             {/* Bio */}
