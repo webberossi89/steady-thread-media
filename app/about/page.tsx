@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -333,21 +334,21 @@ export default function AboutPage() {
             {/* Avatar */}
             <div
               style={{
-                width: "80px",
-                height: "80px",
+                width: "88px",
+                height: "88px",
                 borderRadius: "50%",
-                backgroundColor: card,
+                overflow: "hidden",
                 border: `1px solid ${border}`,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
                 flexShrink: 0,
               }}
             >
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="18" cy="14" r="7" stroke="#e8d5ff" strokeWidth="1.4" fill="none"/>
-                <path d="M4 34c0-7.732 6.268-14 14-14s14 6.268 14 14" stroke="#e8d5ff" strokeWidth="1.4" strokeLinecap="round" fill="none"/>
-              </svg>
+              <Image
+                src="/jared-webber.jpg"
+                alt="Jared Webber"
+                width={88}
+                height={88}
+                style={{ objectFit: "cover", width: "100%", height: "100%" }}
+              />
             </div>
             {/* Bio */}
             <div>
