@@ -45,27 +45,27 @@ const posts = [
     title: "HubSpot Configuration Mistakes That Kill Outbound Attribution",
     summary:
       "If your CRM can't tell you which outbound activity generated pipeline, you're flying blind. The 6 setup mistakes we fix in every engagement.",
-    date: "Coming Soon",
+    date: "April 15, 2025",
     readTime: "7 min read",
-    slug: null,
+    slug: "hubspot-outbound-attribution",
   },
   {
     category: "ABM",
     title: "Why ABM Fails for Most B2B SaaS Companies (And What to Do Instead)",
     summary:
       "ABM isn't a tool — it's a motion. Most teams fail because they try to run ABM without the prerequisites in place. Here's the honest framework.",
-    date: "Coming Soon",
+    date: "May 8, 2025",
     readTime: "10 min read",
-    slug: null,
+    slug: "why-abm-fails-b2b-saas",
   },
   {
     category: "GTM Strategy",
     title: "The Referral Trap: What Happens When You Scale Off Warm Intros",
     summary:
       "Referral-dependent growth feels great until it doesn't. The warning signs that your pipeline is fragile — and what to build before the tap runs dry.",
-    date: "Coming Soon",
+    date: "June 3, 2025",
     readTime: "9 min read",
-    slug: null,
+    slug: "referral-trap-warm-intros",
   },
 ];
 

@@ -65,5 +65,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: `${base}/insights/hubspot-outbound-attribution`,
+      lastModified: new Date("2025-04-15"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${base}/insights/why-abm-fails-b2b-saas`,
+      lastModified: new Date("2025-05-08"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${base}/insights/referral-trap-warm-intros`,
+      lastModified: new Date("2025-06-03"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
   ];
 }
