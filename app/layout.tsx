@@ -12,6 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://steadythreadmedia.com"),
   title: "Steady Thread Media — GTM Engineering Agency",
   description:
     "We build signal-based outbound and account-based marketing systems for B2B revenue teams that need consistent pipeline.",
@@ -23,8 +24,12 @@ export const metadata: Metadata = {
     title: "Steady Thread Media",
     description: "Strategic GTM systems for consistent B2B growth.",
     siteName: "Steady Thread Media",
+    url: "https://steadythreadmedia.com",
     locale: "en_US",
     type: "website",
+  },
+  alternates: {
+    canonical: "https://steadythreadmedia.com",
   },
 };
 
