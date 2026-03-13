@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
   },
+  verification: {
+    google: "tf-KeFMFunwcVfdD0EskyjylY_K9372MV2f57WYMU8U",
+  },
   openGraph: {
     title: "Steady Thread Media",
     description: "Strategic GTM systems for consistent B2B growth.",
