@@ -17,6 +17,8 @@ declare global {
 export default function ContactPage() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     const script = document.createElement("script");
@@ -51,9 +53,23 @@ export default function ContactPage() {
     };
   }, []);
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      if (!res.ok) throw new Error("Failed to submit");
+      setSubmitted(true);
+    } catch {
+      setError("Something went wrong — please try again.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -215,6 +231,7 @@ export default function ContactPage() {
                     />
                     <button
                       type="submit"
+                      disabled={loading}
                       className="btn-white"
                       style={{
                         fontSize: "13px",
@@ -224,15 +241,21 @@ export default function ContactPage() {
                         padding: "11px 18px",
                         borderRadius: "10px",
                         border: "none",
-                        cursor: "pointer",
+                        cursor: loading ? "not-allowed" : "pointer",
                         fontFamily: "Inter, sans-serif",
                         whiteSpace: "nowrap",
                         flexShrink: 0,
+                        opacity: loading ? 0.7 : 1,
                       }}
                     >
-                      Reach out →
+                      {loading ? "Sending…" : "Reach out →"}
                     </button>
                   </form>
+                  {error && (
+                    <p style={{ fontSize: "12px", color: "#ff6b6b", marginTop: "8px" }}>
+                      {error}
+                    </p>
+                  )}
                 </>
               )}
             </div>
