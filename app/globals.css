@@ -101,3 +101,59 @@ body {
   transition: color 0.15s ease;
 }
 .footer-link:hover { color: rgba(255, 255, 255, 0.85) !important; }
+
+/* ── Article body typography ──────────────────────── */
+.article-body { font-size: 17px; line-height: 1.8; color: rgba(255,255,255,0.88); }
+.article-body h2 {
+  font-size: clamp(20px, 2.5vw, 28px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 56px 0 20px;
+  color: #ffffff;
+}
+.article-body h3 {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 36px 0 14px;
+  color: #ffffff;
+}
+.article-body p { margin-bottom: 24px; }
+.article-body ul, .article-body ol {
+  padding-left: 24px;
+  margin-bottom: 24px;
+}
+.article-body li { margin-bottom: 10px; }
+.article-body strong { color: #ffffff; font-weight: 600; }
+.article-body a { color: #e8d5ff; text-decoration: underline; text-underline-offset: 3px; }
+.article-body a:hover { color: #ffffff; }
+.article-body blockquote {
+  border-left: 2px solid #e8d5ff;
+  margin: 36px 0;
+  padding: 16px 24px;
+  background: rgba(232,213,255,0.05);
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  color: rgba(255,255,255,0.75);
+}
+.article-body code {
+  font-family: 'Menlo', 'Monaco', monospace;
+  font-size: 14px;
+  background: rgba(255,255,255,0.08);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #e8d5ff;
+}
+.article-body hr {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  margin: 48px 0;
+}
+.article-body .callout {
+  background: rgba(232,213,255,0.07);
+  border: 1px solid rgba(232,213,255,0.15);
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin: 32px 0;
+}

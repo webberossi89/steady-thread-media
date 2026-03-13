@@ -15,6 +15,10 @@ export const metadata: Metadata = {
   title: "Steady Thread Media — GTM Engineering Agency",
   description:
     "We build signal-based outbound and account-based marketing systems for B2B revenue teams that need consistent pipeline.",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+  },
   openGraph: {
     title: "Steady Thread Media",
     description: "Strategic GTM systems for consistent B2B growth.",

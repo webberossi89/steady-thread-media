@@ -42,33 +42,14 @@ export default function Nav() {
         }}
       >
         {/* Logo */}
-        <Link
-          href="/"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "10px",
-            textDecoration: "none",
-            color: "#ffffff",
-          }}
-        >
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 18 18"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M9 1L9 17M1 9L17 9M3.22 3.22L14.78 14.78M14.78 3.22L3.22 14.78"
-              stroke="white"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-            />
+        <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
+          <svg width="148" height="32" viewBox="0 0 148 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="8" stroke="#e8d5ff" strokeWidth="1.4" fill="none"/>
+            <circle cx="16" cy="16" r="2.5" fill="#e8d5ff"/>
+            <line x1="24" y1="16" x2="32" y2="16" stroke="#e8d5ff" strokeWidth="1.4" strokeLinecap="round"/>
+            <text x="40" y="13" fill="white" fontFamily="Inter, sans-serif" fontWeight="600" fontSize="12" letterSpacing="-0.2">Steady Thread</text>
+            <text x="40" y="26" fill="rgba(232,213,255,0.7)" fontFamily="Inter, sans-serif" fontWeight="300" fontSize="8.5" letterSpacing="0.22em">MEDIA</text>
           </svg>
-          <span style={{ fontWeight: 600, fontSize: "15px", letterSpacing: "-0.01em" }}>
-            Steady Thread Media
-          </span>
         </Link>
 
         {/* Desktop nav */}
