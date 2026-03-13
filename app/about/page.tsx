@@ -305,6 +305,98 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Founder */}
+      <section style={{ padding: "80px 24px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <p
+            style={{
+              fontSize: "11px",
+              fontWeight: 600,
+              letterSpacing: "0.1em",
+              color: muted,
+              textTransform: "uppercase",
+              marginBottom: "40px",
+            }}
+          >
+            Founder
+          </p>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "auto 1fr",
+              gap: "40px",
+              alignItems: "start",
+              maxWidth: "720px",
+            }}
+            className="founder-grid"
+          >
+            {/* Avatar */}
+            <div
+              style={{
+                width: "80px",
+                height: "80px",
+                borderRadius: "50%",
+                backgroundColor: card,
+                border: `1px solid ${border}`,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexShrink: 0,
+              }}
+            >
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="18" cy="14" r="7" stroke="#e8d5ff" strokeWidth="1.4" fill="none"/>
+                <path d="M4 34c0-7.732 6.268-14 14-14s14 6.268 14 14" stroke="#e8d5ff" strokeWidth="1.4" strokeLinecap="round" fill="none"/>
+              </svg>
+            </div>
+            {/* Bio */}
+            <div>
+              <p
+                style={{
+                  fontSize: "20px",
+                  fontWeight: 700,
+                  letterSpacing: "-0.02em",
+                  marginBottom: "4px",
+                }}
+              >
+                Jared Webber
+              </p>
+              <p
+                style={{
+                  fontSize: "12px",
+                  color: accent,
+                  fontWeight: 500,
+                  letterSpacing: "0.04em",
+                  marginBottom: "20px",
+                }}
+              >
+                Founder & GTM Engineer
+              </p>
+              <p
+                style={{
+                  fontSize: "15px",
+                  color: muted,
+                  lineHeight: 1.8,
+                  marginBottom: "16px",
+                }}
+              >
+                Background in marketing, demand generation, and agency-side GTM work across B2B. Started Steady Thread to build the kind of outbound infrastructure he kept wishing clients already had — signal-based, accountable, and actually running.
+              </p>
+              <p
+                style={{
+                  fontSize: "15px",
+                  color: muted,
+                  lineHeight: 1.8,
+                }}
+              >
+                Based in Charlotte, NC. Focused on Clay, HubSpot, and the systems that turn ICP clarity into consistent pipeline.
+              </p>
+            </div>
+          </div>
+        </div>
+        <style>{`@media(max-width:480px){.founder-grid{grid-template-columns:1fr!important;}}`}</style>
+      </section>
+
       {/* CTA */}
       <section style={{ padding: "100px 24px", textAlign: "center" }}>
         <div style={{ maxWidth: "520px", margin: "0 auto" }}>
