@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Insights | Steady Thread Media",
   description:
     "Practical writing on outbound systems, account-based marketing, and pipeline operations for B2B revenue teams.",
+  alternates: {
+    canonical: "/insights",
+  },
 };
 
 const accent = "#e8d5ff";

@@ -2,16 +2,17 @@ import type { Metadata } from "next";
 import ArticleLayout from "@/components/ArticleLayout";
 
 export const metadata: Metadata = {
-  title: "The 4 Buying Signals That Actually Drive B2B Pipeline (And How to Automate Them)",
+  title: "4 Buying Signals That Drive B2B Pipeline (And How to Automate Them)",
   description:
-    "There are hundreds of intent signals. Most are noise. These four consistently correlate with pipeline from outbound — and here's how to capture them automatically.",
+    "Most intent signals are noise. These four consistently correlate with outbound pipeline — here's how to capture them automatically.",
   openGraph: {
-    title: "The 4 Buying Signals That Actually Drive B2B Pipeline (And How to Automate Them)",
+    title: "4 Buying Signals That Drive B2B Pipeline (And How to Automate Them)",
     description:
-      "There are hundreds of intent signals. Most are noise. These four consistently correlate with pipeline from outbound — and here's how to capture them automatically.",
+      "Most intent signals are noise. These four consistently correlate with outbound pipeline — here's how to capture them automatically.",
     type: "article",
     publishedTime: "2025-01-15T00:00:00Z",
     url: "https://steadythreadmedia.com/insights/buying-signals-b2b-pipeline",
+    images: [{ url: "https://steadythreadmedia.com/opengraph-image" }],
   },
   alternates: {
     canonical: "https://steadythreadmedia.com/insights/buying-signals-b2b-pipeline",

@@ -4,14 +4,15 @@ import ArticleLayout from "@/components/ArticleLayout";
 export const metadata: Metadata = {
   title: "HubSpot Configuration Mistakes That Kill Outbound Attribution",
   description:
-    "If your CRM can't tell you which outbound activity generated pipeline, you're flying blind. The 6 HubSpot setup mistakes that break attribution — and how to fix them.",
+    "Can't tell which outbound activity generated pipeline? The 6 HubSpot setup mistakes that break attribution — and how to fix them.",
   openGraph: {
     title: "HubSpot Configuration Mistakes That Kill Outbound Attribution",
     description:
-      "If your CRM can't tell you which outbound activity generated pipeline, you're flying blind. The 6 HubSpot setup mistakes that break attribution — and how to fix them.",
+      "Can't tell which outbound activity generated pipeline? The 6 HubSpot setup mistakes that break attribution — and how to fix them.",
     type: "article",
     publishedTime: "2025-04-15T00:00:00Z",
     url: "https://steadythreadmedia.com/insights/hubspot-outbound-attribution",
+    images: [{ url: "https://steadythreadmedia.com/opengraph-image" }],
   },
   alternates: {
     canonical: "https://steadythreadmedia.com/insights/hubspot-outbound-attribution",

@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "About | Steady Thread Media",
   description:
     "GTM engineering agency based in Charlotte, NC. We build signal-based outbound and ABM systems for B2B revenue teams.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 const accent = "#e8d5ff";

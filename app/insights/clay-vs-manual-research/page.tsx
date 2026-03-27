@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2025-02-20T00:00:00Z",
     url: "https://steadythreadmedia.com/insights/clay-vs-manual-research",
+    images: [{ url: "https://steadythreadmedia.com/opengraph-image" }],
   },
   alternates: {
     canonical: "https://steadythreadmedia.com/insights/clay-vs-manual-research",

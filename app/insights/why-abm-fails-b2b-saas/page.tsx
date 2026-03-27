@@ -4,14 +4,15 @@ import ArticleLayout from "@/components/ArticleLayout";
 export const metadata: Metadata = {
   title: "Why ABM Fails for Most B2B SaaS Companies (And What to Do Instead)",
   description:
-    "ABM isn't a tool — it's a motion. Most B2B SaaS teams fail at account-based marketing because they try to run it without the prerequisites in place. Here's the honest framework.",
+    "Most B2B SaaS teams fail at ABM because they skip the prerequisites. Here's the honest framework for when it works and what to do instead.",
   openGraph: {
     title: "Why ABM Fails for Most B2B SaaS Companies (And What to Do Instead)",
     description:
-      "ABM isn't a tool — it's a motion. Most B2B SaaS teams fail at account-based marketing because they try to run it without the prerequisites in place. Here's the honest framework.",
+      "Most B2B SaaS teams fail at ABM because they skip the prerequisites. Here's the honest framework for when it works and what to do instead.",
     type: "article",
     publishedTime: "2025-05-08T00:00:00Z",
     url: "https://steadythreadmedia.com/insights/why-abm-fails-b2b-saas",
+    images: [{ url: "https://steadythreadmedia.com/opengraph-image" }],
   },
   alternates: {
     canonical: "https://steadythreadmedia.com/insights/why-abm-fails-b2b-saas",

@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Case Studies | Steady Thread Media",
   description:
     "Real outcomes from B2B teams that replaced referral dependency with signal-based outbound and ABM systems.",
+  alternates: {
+    canonical: "/case-studies",
+  },
 };
 
 const accent = "#e8d5ff";

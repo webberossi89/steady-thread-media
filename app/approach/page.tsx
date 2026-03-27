@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Our Approach | Steady Thread Media",
   description:
     "A 4-step system to go from target account list to qualified pipeline. Account intelligence, system build, launch, and ongoing optimization.",
+  alternates: {
+    canonical: "/approach",
+  },
 };
 
 const accent = "#e8d5ff";

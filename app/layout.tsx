@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description: "Signal-based outbound and ABM systems for B2B revenue teams that need consistent pipeline.",
   },
   alternates: {
-    canonical: "https://steadythreadmedia.com",
+    canonical: "/",
   },
 };
 

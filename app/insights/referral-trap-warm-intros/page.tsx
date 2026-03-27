@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2025-06-03T00:00:00Z",
     url: "https://steadythreadmedia.com/insights/referral-trap-warm-intros",
+    images: [{ url: "https://steadythreadmedia.com/opengraph-image" }],
   },
   alternates: {
     canonical: "https://steadythreadmedia.com/insights/referral-trap-warm-intros",

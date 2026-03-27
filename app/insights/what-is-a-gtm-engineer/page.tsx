@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     type: "article",
     publishedTime: "2025-03-10T00:00:00Z",
     url: "https://steadythreadmedia.com/insights/what-is-a-gtm-engineer",
+    images: [{ url: "https://steadythreadmedia.com/opengraph-image" }],
   },
   alternates: {
     canonical: "https://steadythreadmedia.com/insights/what-is-a-gtm-engineer",
