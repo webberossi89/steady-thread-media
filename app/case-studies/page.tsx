@@ -257,12 +257,6 @@ export default function CaseStudiesPage() {
             </div>
           ))}
         </div>
-        <style>{`
-          @media(max-width:768px){
-            .cs-grid{grid-template-columns:1fr!important;}
-            .outcome-grid{grid-template-columns:1fr!important;}
-          }
-        `}</style>
       </section>
 
       {/* CTA */}

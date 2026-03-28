@@ -224,10 +224,6 @@ export default function ApproachPage() {
             </div>
           ))}
         </div>
-        <style>{`
-          @media(max-width:900px){.step-grid{grid-template-columns:1fr!important;}}
-          @media(max-width:640px){.step-inner{grid-template-columns:1fr!important;}}
-        `}</style>
       </section>
 
       {/* Principles */}

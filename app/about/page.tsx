@@ -185,7 +185,6 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-        <style>{`@media(max-width:768px){.about-grid{grid-template-columns:1fr!important;}}`}</style>
       </section>
 
       {/* How we're different */}
@@ -305,7 +304,6 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
-          <style>{`@media(max-width:640px){.diff-grid{grid-template-columns:1fr!important;}}`}</style>
         </div>
       </section>
 
@@ -398,7 +396,6 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-        <style>{`@media(max-width:480px){.founder-grid{grid-template-columns:1fr!important;}}`}</style>
       </section>
 
       {/* CTA */}

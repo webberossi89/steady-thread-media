@@ -193,7 +193,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <style>{`@media(max-width:768px){.hero-grid{grid-template-columns:1fr!important;}}`}</style>
       </section>
 
       {/* ── Stats bar ───────────────────────────────────── */}
@@ -403,7 +402,6 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <style>{`@media(max-width:768px){.icp-grid{grid-template-columns:1fr!important;}}`}</style>
       </section>
 
       {/* ── Services overview ───────────────────────────── */}

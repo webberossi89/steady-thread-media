@@ -102,6 +102,35 @@ body {
 }
 .footer-link:hover { color: rgba(255, 255, 255, 0.85) !important; }
 
+/* ── Responsive grid overrides ──────────────────────── */
+@media (max-width: 768px) {
+  .hero-grid { grid-template-columns: 1fr !important; }
+  .icp-grid { grid-template-columns: 1fr !important; }
+  .service-grid { grid-template-columns: 1fr !important; }
+  .about-grid { grid-template-columns: 1fr !important; }
+  .contact-grid { grid-template-columns: 1fr !important; }
+  .cs-grid { grid-template-columns: 1fr !important; }
+  .outcome-grid { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 900px) {
+  .step-grid { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 640px) {
+  .diff-grid { grid-template-columns: 1fr !important; }
+  .step-inner { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 480px) {
+  .founder-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ── Contact form ───────────────────────────────────── */
+input::placeholder { color: rgba(255,255,255,0.25); }
+input:focus { border-color: rgba(232,213,255,0.35) !important; }
+
+/* ── Nav responsive ─────────────────────────────────── */
+@media (min-width: 768px) { .mobile-nav { display: none !important; } }
+@media (max-width: 767px) { .desktop-nav { display: none !important; } }
+
 /* ── Article body typography ──────────────────────── */
 .article-body { font-size: 17px; line-height: 1.8; color: rgba(255,255,255,0.88); }
 .article-body h2 {

@@ -325,7 +325,6 @@ export default function ServicesPage() {
             </div>
           ))}
         </div>
-        <style>{`@media(max-width:768px){.service-grid{grid-template-columns:1fr!important;}}`}</style>
       </section>
 
       {/* CTA */}

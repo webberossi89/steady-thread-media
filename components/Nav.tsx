@@ -168,10 +168,6 @@ export default function Nav() {
         </div>
       )}
 
-      <style>{`
-        @media (min-width: 768px) { .mobile-nav { display: none !important; } }
-        @media (max-width: 767px) { .desktop-nav { display: none !important; } }
-      `}</style>
     </header>
   );
 }
