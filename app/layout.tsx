@@ -39,6 +39,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "/",
+    types: {
+      "application/rss+xml": "/feed.xml",
+    },
   },
 };
 
@@ -68,6 +71,8 @@ export default function RootLayout({
             }),
           }}
         />
+      </head>
+      <body style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
         <Script
           id="gtm-script"
           strategy="afterInteractive"
@@ -79,8 +84,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-TKCT64P3');`,
           }}
         />
-      </head>
-      <body style={{ fontFamily: "var(--font-inter), Inter, sans-serif" }}>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-TKCT64P3"

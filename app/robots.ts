@@ -7,5 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
     },
     sitemap: "https://steadythreadmedia.com/sitemap.xml",
+    // RSS feed available at https://steadythreadmedia.com/feed.xml
   };
 }

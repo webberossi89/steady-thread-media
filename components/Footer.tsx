@@ -133,9 +133,19 @@ export default function Footer() {
         <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.3)" }}>
           © {new Date().getFullYear()} Steady Thread Media. All rights reserved.
         </p>
-        <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.3)" }}>
-          Charlotte, NC · Serving teams across North America
-        </p>
+        <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+          <p style={{ fontSize: "12px", color: "rgba(255,255,255,0.3)" }}>
+            Charlotte, NC · Serving teams across North America
+          </p>
+          <Link
+            href="/feed.xml"
+            className="footer-link"
+            style={{ fontSize: "12px", color: "rgba(255,255,255,0.3)", textDecoration: "none" }}
+            title="RSS Feed"
+          >
+            RSS
+          </Link>
+        </div>
       </div>
     </footer>
   );
