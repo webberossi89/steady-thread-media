@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+
+:root {
+  --stm-font-display: 'Playfair Display', Georgia, serif;
+  --stm-font-sans: 'Inter', Arial, sans-serif;
+  --stm-color-charcoal: #1A1A1A;
+  --stm-color-lavender: #F0D6FF;
+  --stm-color-soft: #F6F1FA;
+  --stm-color-slate: #5F5566;
+}

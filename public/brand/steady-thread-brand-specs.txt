@@ -1,0 +1,27 @@
+STEADY THREAD MEDIA — BRAND KIT
+
+Primary logo mark:
+- Circular thread mark with connector line
+- Preferred color: Lavender (#F0D6FF)
+
+Core colors:
+- Charcoal: #1A1A1A
+- Lavender: #F0D6FF
+- Soft light: #F6F1FA
+- Slate: #5F5566
+
+Typography:
+- Display / wordmark: Playfair Display Bold
+- Supporting text / MEDIA line: Inter Medium
+
+Recommended logo usage:
+- Use horizontal lockup for website nav, decks, proposals, and headers
+- Use stacked lockup for covers, social cards, and centered layouts
+- Use mark-only assets for avatars, favicons, overlays, and layered compositions
+- Keep generous clear space around the mark and wordmark
+
+Included kit assets:
+- Mark-only exports in lavender, white, and charcoal
+- Horizontal and stacked lockups in light and dark versions
+- Wordmarks, avatars, banners, and alternate lockup concepts
+- Fonts import stylesheet for web usage

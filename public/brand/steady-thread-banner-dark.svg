@@ -1,0 +1,11 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#1A1A1A"/>
+  <g transform="translate(180 240) scale(1.05)">
+  <g fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="176" cy="256" r="92" stroke="#F0D6FF" stroke-width="18"/>
+    <circle cx="176" cy="256" r="24" fill="#F0D6FF"/>
+    <path d="M286 256H396" stroke="#F0D6FF" stroke-width="18" stroke-linecap="round"/>
+  </g></g>
+  <text x="660" y="408" fill="#F6F1FA" font-family="Playfair Display, Georgia, serif" font-size="132" font-weight="700" letter-spacing="-2.4">Steady Thread</text>
+  <text x="670" y="506" fill="#DCCEE6" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="500" letter-spacing="16">MEDIA</text>
+</svg>
