@@ -10,11 +10,6 @@ export const metadata: Metadata = {
   },
 };
 
-const accent = "#e8d5ff";
-const card = "#222222";
-const border = "rgba(255,255,255,0.07)";
-const muted = "rgba(255,255,255,0.55)";
-
 const services = [
   {
     num: "01",
@@ -94,58 +89,23 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section style={{ padding: "140px 24px 80px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <p
-            style={{
-              fontSize: "11px",
-              fontWeight: 600,
-              letterSpacing: "0.1em",
-              color: muted,
-              textTransform: "uppercase",
-              marginBottom: "20px",
-            }}
-          >
+      <section className="pt-[140px] pb-20 px-6">
+        <div className="container mx-auto px-6 max-w-[1200px]">
+          <p className="text-[11px] font-semibold tracking-[0.1em] text-muted-foreground uppercase mb-5">
             Services
           </p>
-          <h1
-            style={{
-              fontSize: "clamp(36px, 5vw, 68px)",
-              fontWeight: 700,
-              lineHeight: 1.05,
-              letterSpacing: "-0.03em",
-              maxWidth: "820px",
-              marginBottom: "24px",
-            }}
-          >
+          <h1 className="text-[clamp(36px,5vw,68px)] font-bold tracking-tight leading-[1.05] max-w-[820px] mb-6">
             Everything you need to build{" "}
-            <span style={{ color: accent }}>consistent pipeline</span>
+            <span className="text-primary">consistent pipeline</span>
           </h1>
-          <p
-            style={{
-              fontSize: "17px",
-              color: muted,
-              lineHeight: 1.7,
-              maxWidth: "560px",
-              marginBottom: "40px",
-            }}
-          >
+          <p className="text-[17px] text-muted-foreground leading-[1.7] max-w-[560px] mb-10">
             We don&apos;t hand you a strategy doc. We build the full system —
             account intelligence, outbound infrastructure, ABM programs, and CRM
             operations — and run it alongside you.
           </p>
           <Link
             href="/contact"
-            className="btn-white"
-            style={{
-              fontSize: "14px",
-              fontWeight: 500,
-              color: "#1a1a1a",
-              backgroundColor: "#ffffff",
-              padding: "12px 28px",
-              borderRadius: "100px",
-              textDecoration: "none",
-            }}
+            className="btn-white inline-block text-sm font-medium bg-primary text-primary-foreground px-7 py-3 rounded-full no-underline"
           >
             Book a GTM Assessment
           </Link>
@@ -153,71 +113,28 @@ export default function ServicesPage() {
       </section>
 
       {/* Services detail */}
-      <section style={{ padding: "0 24px 120px" }}>
-        <div
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-            display: "flex",
-            flexDirection: "column",
-            gap: "80px",
-          }}
-        >
+      <section className="px-6 pb-[120px]">
+        <div className="container mx-auto px-6 max-w-[1200px] flex flex-col gap-20">
           {services.map((service) => (
             <div
               key={service.num}
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1.2fr",
-                gap: "64px",
-                borderTop: `1px solid ${border}`,
-                paddingTop: "64px",
-              }}
-              className="service-grid"
+              className="service-grid border-t border-white/5 pt-16"
             >
               {/* Left */}
               <div>
-                <p
-                  style={{
-                    fontSize: "12px",
-                    fontWeight: 600,
-                    color: accent,
-                    letterSpacing: "0.06em",
-                    marginBottom: "16px",
-                  }}
-                >
+                <p className="text-xs font-semibold text-primary tracking-[0.06em] mb-4">
                   {service.num}
                 </p>
-                <h2
-                  style={{
-                    fontSize: "clamp(22px, 2.5vw, 32px)",
-                    fontWeight: 700,
-                    lineHeight: 1.15,
-                    letterSpacing: "-0.02em",
-                    marginBottom: "12px",
-                  }}
-                >
+                <h2 className="text-[clamp(22px,2.5vw,32px)] font-bold tracking-tight leading-[1.15] mb-3">
                   {service.title}
                 </h2>
-                <p
-                  style={{
-                    fontSize: "15px",
-                    color: accent,
-                    marginBottom: "24px",
-                    fontStyle: "italic",
-                  }}
-                >
+                <p className="text-[15px] text-primary italic mb-6">
                   {service.tagline}
                 </p>
                 {service.body.map((p, i) => (
                   <p
                     key={i}
-                    style={{
-                      fontSize: "15px",
-                      color: muted,
-                      lineHeight: 1.75,
-                      marginBottom: "16px",
-                    }}
+                    className="text-[15px] text-muted-foreground leading-[1.75] mb-4"
                   >
                     {p}
                   </p>
@@ -227,46 +144,22 @@ export default function ServicesPage() {
                 {service.readMore && (
                   <Link
                     href={service.readMore.href}
-                    className="link-muted"
-                    style={{
-                      display: "inline-block",
-                      fontSize: "13px",
-                      color: accent,
-                      textDecoration: "none",
-                      marginTop: "4px",
-                      marginBottom: "8px",
-                    }}
+                    className="link-muted inline-block text-[13px] text-primary no-underline mt-1 mb-2"
                   >
                     {service.readMore.label}
                   </Link>
                 )}
 
                 {/* Tools */}
-                <div style={{ marginTop: "24px" }}>
-                  <p
-                    style={{
-                      fontSize: "11px",
-                      fontWeight: 600,
-                      letterSpacing: "0.08em",
-                      color: muted,
-                      textTransform: "uppercase",
-                      marginBottom: "10px",
-                    }}
-                  >
+                <div className="mt-6">
+                  <p className="text-[11px] font-semibold tracking-[0.08em] text-muted-foreground uppercase mb-2.5">
                     Tools
                   </p>
-                  <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
+                  <div className="flex gap-2 flex-wrap">
                     {service.tools.map((tool) => (
                       <span
                         key={tool}
-                        style={{
-                          fontSize: "12px",
-                          color: "rgba(255,255,255,0.6)",
-                          backgroundColor: card,
-                          border: `1px solid ${border}`,
-                          padding: "5px 12px",
-                          borderRadius: "100px",
-                        }}
+                        className="text-xs text-muted-foreground bg-secondary border border-white/5 px-3 py-1 rounded-full"
                       >
                         {tool}
                       </span>
@@ -276,47 +169,17 @@ export default function ServicesPage() {
               </div>
 
               {/* Right — deliverables */}
-              <div
-                style={{
-                  backgroundColor: card,
-                  border: `1px solid ${border}`,
-                  borderRadius: "16px",
-                  padding: "32px",
-                  alignSelf: "flex-start",
-                }}
-              >
-                <p
-                  style={{
-                    fontSize: "11px",
-                    fontWeight: 600,
-                    letterSpacing: "0.08em",
-                    color: muted,
-                    textTransform: "uppercase",
-                    marginBottom: "20px",
-                  }}
-                >
+              <div className="bg-secondary border border-white/5 rounded-2xl p-8 self-start">
+                <p className="text-[11px] font-semibold tracking-[0.08em] text-muted-foreground uppercase mb-5">
                   What You Get
                 </p>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "14px",
-                  }}
-                >
+                <div className="flex flex-col gap-3.5">
                   {service.deliverables.map((d) => (
                     <div
                       key={d}
-                      style={{
-                        display: "flex",
-                        alignItems: "flex-start",
-                        gap: "12px",
-                        fontSize: "14px",
-                        color: "rgba(255,255,255,0.75)",
-                        lineHeight: 1.5,
-                      }}
+                      className="flex items-start gap-3 text-sm text-white/75 leading-[1.5]"
                     >
-                      <span style={{ color: accent, flexShrink: 0 }}>✓</span>
+                      <span className="text-primary shrink-0">✓</span>
                       {d}
                     </div>
                   ))}
@@ -328,49 +191,18 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section
-        style={{
-          padding: "100px 24px",
-          backgroundColor: "#1e1e1e",
-          borderTop: `1px solid ${border}`,
-          textAlign: "center",
-        }}
-      >
-        <div style={{ maxWidth: "560px", margin: "0 auto" }}>
-          <h2
-            style={{
-              fontSize: "clamp(26px, 3.5vw, 44px)",
-              fontWeight: 700,
-              letterSpacing: "-0.025em",
-              lineHeight: 1.1,
-              marginBottom: "20px",
-            }}
-          >
+      <section className="py-[100px] px-6 bg-secondary border-t border-white/5 text-center">
+        <div className="max-w-[560px] mx-auto">
+          <h2 className="text-[clamp(26px,3.5vw,44px)] font-bold tracking-tight leading-[1.1] mb-5">
             Not sure which service fits?
           </h2>
-          <p
-            style={{
-              fontSize: "16px",
-              color: muted,
-              lineHeight: 1.7,
-              marginBottom: "36px",
-            }}
-          >
+          <p className="text-base text-muted-foreground leading-[1.7] mb-9">
             Book a GTM assessment and we&apos;ll map out exactly what your
             pipeline needs and where to start.
           </p>
           <Link
             href="/contact"
-            className="btn-white"
-            style={{
-              fontSize: "14px",
-              fontWeight: 500,
-              color: "#1a1a1a",
-              backgroundColor: "#ffffff",
-              padding: "12px 28px",
-              borderRadius: "100px",
-              textDecoration: "none",
-            }}
+            className="btn-white inline-block text-sm font-medium bg-primary text-primary-foreground px-7 py-3 rounded-full no-underline"
           >
             Book a GTM Assessment
           </Link>

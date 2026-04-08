@@ -10,11 +10,6 @@ export const metadata: Metadata = {
   },
 };
 
-const accent = "#e8d5ff";
-const card = "#222222";
-const border = "rgba(255,255,255,0.07)";
-const muted = "rgba(255,255,255,0.55)";
-
 const steps = [
   {
     num: "01",
@@ -70,41 +65,16 @@ export default function ApproachPage() {
   return (
     <>
       {/* Hero */}
-      <section style={{ padding: "140px 24px 80px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <p
-            style={{
-              fontSize: "11px",
-              fontWeight: 600,
-              letterSpacing: "0.1em",
-              color: muted,
-              textTransform: "uppercase",
-              marginBottom: "20px",
-            }}
-          >
+      <section className="pt-[140px] pb-20 px-6">
+        <div className="container mx-auto px-6 max-w-[1200px]">
+          <p className="text-xs font-semibold tracking-widest text-muted-foreground uppercase mb-5">
             Our Approach
           </p>
-          <h1
-            style={{
-              fontSize: "clamp(36px, 5vw, 68px)",
-              fontWeight: 700,
-              lineHeight: 1.05,
-              letterSpacing: "-0.03em",
-              maxWidth: "760px",
-              marginBottom: "24px",
-            }}
-          >
+          <h1 className="text-[clamp(36px,5vw,68px)] font-bold leading-[1.05] tracking-tight max-w-[760px] mb-6">
             A system, not a{" "}
-            <span style={{ color: accent }}>strategy doc</span>
+            <span className="text-primary">strategy doc</span>
           </h1>
-          <p
-            style={{
-              fontSize: "17px",
-              color: muted,
-              lineHeight: 1.7,
-              maxWidth: "540px",
-            }}
-          >
+          <p className="text-[17px] text-muted-foreground leading-relaxed max-w-[540px]">
             Most GTM engagements end with a deck. Ours end with a running
             system. Here&apos;s exactly how we go from your target account list
             to qualified pipeline in the calendar.
@@ -113,108 +83,45 @@ export default function ApproachPage() {
       </section>
 
       {/* Process steps */}
-      <section style={{ padding: "0 24px 120px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          {steps.map((step, i) => (
+      <section className="px-6 pb-[120px]">
+        <div className="container mx-auto px-6 max-w-[1200px]">
+          {steps.map((step) => (
             <div
               key={step.num}
-              style={{
-                display: "grid",
-                gridTemplateColumns: "240px 1fr",
-                gap: "48px",
-                borderTop: `1px solid ${border}`,
-                padding: "56px 0",
-              }}
-              className="step-grid"
+              className="step-grid border-t border-white/5 py-14 grid gap-12"
+              style={{ gridTemplateColumns: "240px 1fr" }}
             >
               {/* Left — number + duration */}
               <div>
-                <p
-                  style={{
-                    fontSize: "48px",
-                    fontWeight: 700,
-                    letterSpacing: "-0.04em",
-                    color: "rgba(255,255,255,0.08)",
-                    lineHeight: 1,
-                    marginBottom: "12px",
-                  }}
-                >
+                <p className="text-5xl font-bold tracking-tight text-white/[0.08] leading-none mb-3">
                   {step.num}
                 </p>
-                <span
-                  style={{
-                    fontSize: "11px",
-                    fontWeight: 600,
-                    color: accent,
-                    letterSpacing: "0.06em",
-                    textTransform: "uppercase",
-                    backgroundColor: "rgba(232,213,255,0.1)",
-                    padding: "4px 10px",
-                    borderRadius: "100px",
-                  }}
-                >
+                <span className="text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full uppercase tracking-wide">
                   {step.duration}
                 </span>
               </div>
 
               {/* Right — content */}
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "40px" }} className="step-inner">
+              <div className="step-inner grid gap-10" style={{ gridTemplateColumns: "1fr 1fr" }}>
                 <div>
-                  <h2
-                    style={{
-                      fontSize: "clamp(20px, 2vw, 28px)",
-                      fontWeight: 700,
-                      lineHeight: 1.2,
-                      letterSpacing: "-0.02em",
-                      marginBottom: "16px",
-                    }}
-                  >
+                  <h2 className="text-[clamp(20px,2vw,28px)] font-bold tracking-tight leading-snug mb-4">
                     {step.title}
                   </h2>
-                  <p
-                    style={{
-                      fontSize: "15px",
-                      color: muted,
-                      lineHeight: 1.75,
-                    }}
-                  >
+                  <p className="text-[15px] text-muted-foreground leading-[1.75]">
                     {step.body}
                   </p>
                 </div>
-                <div
-                  style={{
-                    backgroundColor: card,
-                    border: `1px solid ${border}`,
-                    borderRadius: "14px",
-                    padding: "24px",
-                  }}
-                >
-                  <p
-                    style={{
-                      fontSize: "11px",
-                      fontWeight: 600,
-                      letterSpacing: "0.08em",
-                      color: muted,
-                      textTransform: "uppercase",
-                      marginBottom: "16px",
-                    }}
-                  >
+                <div className="bg-secondary border border-white/5 rounded-2xl p-6">
+                  <p className="text-xs font-semibold tracking-widest text-muted-foreground uppercase mb-4">
                     Outputs
                   </p>
-                  <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                  <div className="flex flex-col gap-3">
                     {step.outputs.map((o) => (
                       <div
                         key={o}
-                        style={{
-                          display: "flex",
-                          alignItems: "flex-start",
-                          gap: "10px",
-                          fontSize: "13px",
-                          color: "rgba(255,255,255,0.7)",
-                          lineHeight: 1.5,
-                        }}
+                        className="flex items-start gap-2.5 text-[13px] text-white/70 leading-snug"
                       >
-                        <span style={{ color: accent, flexShrink: 0 }}>→</span>
+                        <span className="text-primary shrink-0">→</span>
                         {o}
                       </div>
                     ))}
@@ -227,32 +134,12 @@ export default function ApproachPage() {
       </section>
 
       {/* Principles */}
-      <section
-        style={{
-          padding: "80px 24px",
-          backgroundColor: "#1e1e1e",
-          borderTop: `1px solid ${border}`,
-          borderBottom: `1px solid ${border}`,
-        }}
-      >
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <h2
-            style={{
-              fontSize: "clamp(24px, 3vw, 36px)",
-              fontWeight: 700,
-              letterSpacing: "-0.025em",
-              marginBottom: "48px",
-            }}
-          >
+      <section className="py-20 px-6 bg-secondary border-t border-b border-white/5">
+        <div className="container mx-auto px-6 max-w-[1200px]">
+          <h2 className="text-[clamp(24px,3vw,36px)] font-bold tracking-tight mb-12">
             How we think about GTM
           </h2>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-              gap: "24px",
-            }}
-          >
+          <div className="grid gap-6" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }}>
             {[
               {
                 title: "Signal over volume",
@@ -273,24 +160,12 @@ export default function ApproachPage() {
             ].map((p) => (
               <div
                 key={p.title}
-                style={{
-                  backgroundColor: card,
-                  border: `1px solid ${border}`,
-                  borderRadius: "14px",
-                  padding: "28px",
-                }}
+                className="bg-secondary border border-white/5 rounded-2xl p-7"
               >
-                <h3
-                  style={{
-                    fontSize: "16px",
-                    fontWeight: 600,
-                    marginBottom: "10px",
-                    lineHeight: 1.3,
-                  }}
-                >
+                <h3 className="text-base font-semibold leading-snug mb-2.5">
                   {p.title}
                 </h3>
-                <p style={{ fontSize: "14px", color: muted, lineHeight: 1.7 }}>
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   {p.body}
                 </p>
               </div>
@@ -300,42 +175,18 @@ export default function ApproachPage() {
       </section>
 
       {/* CTA */}
-      <section style={{ padding: "100px 24px", textAlign: "center" }}>
-        <div style={{ maxWidth: "520px", margin: "0 auto" }}>
-          <h2
-            style={{
-              fontSize: "clamp(26px, 3.5vw, 42px)",
-              fontWeight: 700,
-              letterSpacing: "-0.025em",
-              lineHeight: 1.1,
-              marginBottom: "20px",
-            }}
-          >
+      <section className="py-[100px] px-6 text-center">
+        <div className="max-w-[520px] mx-auto">
+          <h2 className="text-[clamp(26px,3.5vw,42px)] font-bold tracking-tight leading-[1.1] mb-5">
             Ready to build the system?
           </h2>
-          <p
-            style={{
-              fontSize: "16px",
-              color: muted,
-              lineHeight: 1.7,
-              marginBottom: "36px",
-            }}
-          >
+          <p className="text-base text-muted-foreground leading-relaxed mb-9">
             Start with a GTM assessment — we&apos;ll audit your current motion
             and map out exactly what needs to change.
           </p>
           <Link
             href="/contact"
-            className="btn-white"
-            style={{
-              fontSize: "14px",
-              fontWeight: 500,
-              color: "#1a1a1a",
-              backgroundColor: "#ffffff",
-              padding: "12px 28px",
-              borderRadius: "100px",
-              textDecoration: "none",
-            }}
+            className="btn-white inline-block text-sm font-medium bg-primary text-primary-foreground px-7 py-3 rounded-full no-underline"
           >
             Book a GTM Assessment
           </Link>

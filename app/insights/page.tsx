@@ -10,11 +10,6 @@ export const metadata: Metadata = {
   },
 };
 
-const accent = "#e8d5ff";
-const card = "#222222";
-const border = "rgba(255,255,255,0.07)";
-const muted = "rgba(255,255,255,0.55)";
-
 const posts = [
   {
     category: "GTM Strategy",
@@ -76,41 +71,16 @@ export default function InsightsPage() {
   return (
     <>
       {/* Hero */}
-      <section style={{ padding: "140px 24px 80px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <p
-            style={{
-              fontSize: "11px",
-              fontWeight: 600,
-              letterSpacing: "0.1em",
-              color: muted,
-              textTransform: "uppercase",
-              marginBottom: "20px",
-            }}
-          >
+      <section className="pt-[140px] pb-20 px-6">
+        <div className="container mx-auto px-6 max-w-[1200px]">
+          <p className="text-[11px] font-semibold tracking-widest text-muted-foreground uppercase mb-5">
             Insights
           </p>
-          <h1
-            style={{
-              fontSize: "clamp(36px, 5vw, 68px)",
-              fontWeight: 700,
-              lineHeight: 1.05,
-              letterSpacing: "-0.03em",
-              maxWidth: "720px",
-              marginBottom: "24px",
-            }}
-          >
+          <h1 className="text-[clamp(36px,5vw,68px)] font-bold leading-[1.05] tracking-[-0.03em] max-w-[720px] mb-6">
             GTM thinking from the{" "}
-            <span style={{ color: accent }}>trenches</span>
+            <span className="text-primary">trenches</span>
           </h1>
-          <p
-            style={{
-              fontSize: "17px",
-              color: muted,
-              lineHeight: 1.7,
-              maxWidth: "500px",
-            }}
-          >
+          <p className="text-[17px] text-muted-foreground leading-[1.7] max-w-[500px]">
             Practical writing on outbound systems, account-based marketing, and
             pipeline operations — from practitioners, not theorists.
           </p>
@@ -118,139 +88,52 @@ export default function InsightsPage() {
       </section>
 
       {/* Posts grid */}
-      <section style={{ padding: "0 24px 120px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+      <section className="px-6 pb-[120px]">
+        <div className="container mx-auto px-6 max-w-[1200px]">
           {/* Featured post */}
           <Link
             href={`/insights/${posts[0].slug}`}
-            style={{ textDecoration: "none", color: "inherit", display: "block" }}
-            className="card-hover"
+            className="no-underline text-inherit block card-hover"
           >
-            <div
-              style={{
-                backgroundColor: card,
-                border: `1px solid ${border}`,
-                borderRadius: "16px",
-                padding: "48px",
-                marginBottom: "32px",
-                transition: "border-color 0.2s ease, background-color 0.2s ease",
-              }}
-            >
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "flex-start",
-                  flexWrap: "wrap",
-                  gap: "16px",
-                  marginBottom: "20px",
-                }}
-              >
-                <span
-                  style={{
-                    fontSize: "11px",
-                    fontWeight: 600,
-                    color: accent,
-                    letterSpacing: "0.06em",
-                    textTransform: "uppercase",
-                    backgroundColor: "rgba(232,213,255,0.1)",
-                    padding: "4px 10px",
-                    borderRadius: "100px",
-                  }}
-                >
+            <div className="bg-secondary border border-white/5 rounded-2xl p-12 mb-8 transition-all hover:border-primary/30">
+              <div className="flex justify-between items-start flex-wrap gap-4 mb-5">
+                <span className="text-[10px] font-semibold text-primary tracking-wider uppercase bg-primary/10 px-[10px] py-1 rounded-full">
                   {posts[0].category}
                 </span>
-                <p style={{ fontSize: "12px", color: muted }}>
+                <p className="text-xs text-muted-foreground">
                   {posts[0].date} · {posts[0].readTime}
                 </p>
               </div>
-              <h2
-                style={{
-                  fontSize: "clamp(22px, 3vw, 34px)",
-                  fontWeight: 700,
-                  lineHeight: 1.15,
-                  letterSpacing: "-0.02em",
-                  marginBottom: "16px",
-                }}
-              >
+              <h2 className="text-[clamp(22px,3vw,34px)] font-bold leading-[1.15] tracking-[-0.02em] mb-4">
                 {posts[0].title}
               </h2>
-              <p
-                style={{
-                  fontSize: "15px",
-                  color: muted,
-                  lineHeight: 1.7,
-                  maxWidth: "640px",
-                  marginBottom: "28px",
-                }}
-              >
+              <p className="text-[15px] text-muted-foreground leading-[1.7] max-w-[640px] mb-7">
                 {posts[0].summary}
               </p>
-              <span style={{ fontSize: "13px", color: accent }}>Read article →</span>
+              <span className="text-[13px] text-primary">Read article →</span>
             </div>
           </Link>
 
           {/* Remaining posts grid */}
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-              gap: "20px",
-            }}
-          >
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-5">
             {posts.slice(1).map((post) => {
               const inner = (
-                <div
-                  style={{
-                    backgroundColor: card,
-                    border: `1px solid ${border}`,
-                    borderRadius: "14px",
-                    padding: "28px",
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "12px",
-                    height: "100%",
-                    transition: "border-color 0.2s ease, background-color 0.2s ease",
-                  }}
-                >
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                      flexWrap: "wrap",
-                      gap: "8px",
-                    }}
-                  >
-                    <span
-                      style={{
-                        fontSize: "10px",
-                        fontWeight: 600,
-                        color: accent,
-                        letterSpacing: "0.06em",
-                        textTransform: "uppercase",
-                      }}
-                    >
+                <div className="bg-secondary border border-white/5 rounded-2xl p-7 flex flex-col gap-3 h-full transition-all hover:border-primary/30">
+                  <div className="flex justify-between items-center flex-wrap gap-2">
+                    <span className="text-[10px] font-semibold text-primary tracking-wider uppercase">
                       {post.category}
                     </span>
-                    <p style={{ fontSize: "11px", color: muted }}>
+                    <p className="text-[11px] text-muted-foreground">
                       {post.date} · {post.readTime}
                     </p>
                   </div>
-                  <h3
-                    style={{
-                      fontSize: "17px",
-                      fontWeight: 600,
-                      lineHeight: 1.3,
-                      letterSpacing: "-0.01em",
-                    }}
-                  >
+                  <h3 className="text-[17px] font-semibold leading-[1.3] tracking-[-0.01em]">
                     {post.title}
                   </h3>
-                  <p style={{ fontSize: "13px", color: muted, lineHeight: 1.7, flexGrow: 1 }}>
+                  <p className="text-[13px] text-muted-foreground leading-[1.7] grow">
                     {post.summary}
                   </p>
-                  <span style={{ fontSize: "12px", color: post.slug ? accent : "rgba(255,255,255,0.3)" }}>
+                  <span className={`text-[12px] ${post.slug ? "text-primary" : "text-white/30"}`}>
                     {post.slug ? "Read article →" : "Coming soon →"}
                   </span>
                 </div>
@@ -260,8 +143,7 @@ export default function InsightsPage() {
                 <Link
                   key={post.title}
                   href={`/insights/${post.slug}`}
-                  style={{ textDecoration: "none", color: "inherit" }}
-                  className="card-hover"
+                  className="no-underline text-inherit card-hover"
                 >
                   {inner}
                 </Link>
@@ -274,52 +156,17 @@ export default function InsightsPage() {
       </section>
 
       {/* Newsletter */}
-      <section
-        style={{
-          padding: "80px 24px",
-          backgroundColor: "#1e1e1e",
-          borderTop: `1px solid ${border}`,
-        }}
-      >
-        <div
-          style={{
-            maxWidth: "480px",
-            margin: "0 auto",
-            textAlign: "center",
-          }}
-        >
-          <h2
-            style={{
-              fontSize: "clamp(22px, 3vw, 32px)",
-              fontWeight: 700,
-              letterSpacing: "-0.02em",
-              marginBottom: "12px",
-            }}
-          >
+      <section className="py-20 px-6 bg-secondary border-t border-white/5">
+        <div className="max-w-[480px] mx-auto text-center">
+          <h2 className="text-[clamp(22px,3vw,32px)] font-bold tracking-[-0.02em] mb-3">
             Get new posts in your inbox
           </h2>
-          <p
-            style={{
-              fontSize: "15px",
-              color: muted,
-              lineHeight: 1.7,
-              marginBottom: "28px",
-            }}
-          >
+          <p className="text-[15px] text-muted-foreground leading-[1.7] mb-7">
             Practical GTM writing. No filler. Occasional but worth it.
           </p>
           <Link
             href="/contact"
-            className="btn-white"
-            style={{
-              fontSize: "14px",
-              fontWeight: 500,
-              color: "#1a1a1a",
-              backgroundColor: "#ffffff",
-              padding: "11px 24px",
-              borderRadius: "100px",
-              textDecoration: "none",
-            }}
+            className="btn-white inline-block text-[14px] font-medium bg-primary text-primary-foreground px-6 py-[11px] rounded-full no-underline"
           >
             Get in touch
           </Link>

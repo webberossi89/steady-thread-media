@@ -10,11 +10,6 @@ export const metadata: Metadata = {
   },
 };
 
-const accent = "#e8d5ff";
-const card = "#222222";
-const border = "rgba(255,255,255,0.07)";
-const muted = "rgba(255,255,255,0.55)";
-
 const caseStudies = [
   {
     industry: "B2B SaaS · Mid-Market",
@@ -64,41 +59,16 @@ export default function CaseStudiesPage() {
   return (
     <>
       {/* Hero */}
-      <section style={{ padding: "140px 24px 80px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <p
-            style={{
-              fontSize: "11px",
-              fontWeight: 600,
-              letterSpacing: "0.1em",
-              color: muted,
-              textTransform: "uppercase",
-              marginBottom: "20px",
-            }}
-          >
+      <section className="pt-[140px] pb-20 px-6">
+        <div className="max-w-[1200px] mx-auto">
+          <p className="text-xs font-semibold tracking-[0.1em] text-muted-foreground uppercase mb-5">
             Case Studies
           </p>
-          <h1
-            style={{
-              fontSize: "clamp(36px, 5vw, 68px)",
-              fontWeight: 700,
-              lineHeight: 1.05,
-              letterSpacing: "-0.03em",
-              maxWidth: "760px",
-              marginBottom: "24px",
-            }}
-          >
+          <h1 className="font-sans text-[clamp(36px,5vw,68px)] font-bold leading-[1.05] tracking-[-0.03em] max-w-[760px] mb-6">
             Results from the{" "}
-            <span style={{ color: accent }}>field</span>
+            <span className="text-primary">field</span>
           </h1>
-          <p
-            style={{
-              fontSize: "17px",
-              color: muted,
-              lineHeight: 1.7,
-              maxWidth: "520px",
-            }}
-          >
+          <p className="font-sans text-[17px] text-muted-foreground leading-[1.7] max-w-[520px]">
             Real outcomes from B2B teams that replaced referral dependency and
             inconsistent outreach with signal-based systems.
           </p>
@@ -106,105 +76,41 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Case studies */}
-      <section style={{ padding: "0 24px 120px" }}>
-        <div
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-            display: "flex",
-            flexDirection: "column",
-            gap: "0",
-          }}
-        >
+      <section className="px-6 pb-[120px]">
+        <div className="max-w-[1200px] mx-auto">
           {caseStudies.map((cs, i) => (
             <div
               key={i}
-              style={{
-                borderTop: `1px solid ${border}`,
-                padding: "64px 0",
-              }}
+              className="border-t border-white/5 py-16"
             >
               {/* Industry tag */}
-              <span
-                style={{
-                  fontSize: "11px",
-                  fontWeight: 600,
-                  color: muted,
-                  letterSpacing: "0.06em",
-                  textTransform: "uppercase",
-                  backgroundColor: card,
-                  padding: "4px 12px",
-                  borderRadius: "100px",
-                  border: `1px solid ${border}`,
-                  display: "inline-block",
-                  marginBottom: "28px",
-                }}
-              >
+              <span className="inline-block text-[11px] font-semibold text-muted-foreground tracking-[0.06em] uppercase bg-secondary border border-white/5 px-3 py-1 rounded-full mb-7">
                 {cs.industry}
               </span>
 
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "1fr 1fr",
-                  gap: "64px",
-                  marginBottom: "40px",
-                }}
-                className="cs-grid"
-              >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-10">
                 {/* Challenge */}
                 <div>
-                  <p
-                    style={{
-                      fontSize: "11px",
-                      fontWeight: 600,
-                      letterSpacing: "0.08em",
-                      color: muted,
-                      textTransform: "uppercase",
-                      marginBottom: "12px",
-                    }}
-                  >
+                  <p className="text-[11px] font-semibold tracking-[0.08em] text-muted-foreground uppercase mb-3">
                     Challenge
                   </p>
-                  <p
-                    style={{
-                      fontSize: "15px",
-                      color: "rgba(255,255,255,0.8)",
-                      lineHeight: 1.7,
-                    }}
-                  >
+                  <p className="font-sans text-[15px] text-white/80 leading-[1.7]">
                     {cs.challenge}
                   </p>
                 </div>
 
                 {/* What we changed */}
                 <div>
-                  <p
-                    style={{
-                      fontSize: "11px",
-                      fontWeight: 600,
-                      letterSpacing: "0.08em",
-                      color: muted,
-                      textTransform: "uppercase",
-                      marginBottom: "12px",
-                    }}
-                  >
+                  <p className="text-[11px] font-semibold tracking-[0.08em] text-muted-foreground uppercase mb-3">
                     What We Changed
                   </p>
-                  <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                  <div className="flex flex-col gap-[10px]">
                     {cs.changes.map((c) => (
                       <div
                         key={c}
-                        style={{
-                          display: "flex",
-                          alignItems: "flex-start",
-                          gap: "10px",
-                          fontSize: "14px",
-                          color: "rgba(255,255,255,0.7)",
-                          lineHeight: 1.5,
-                        }}
+                        className="flex items-start gap-[10px] font-sans text-sm text-white/70 leading-[1.5]"
                       >
-                        <span style={{ color: accent, flexShrink: 0 }}>→</span>
+                        <span className="text-primary shrink-0">→</span>
                         {c}
                       </div>
                     ))}
@@ -213,42 +119,16 @@ export default function CaseStudiesPage() {
               </div>
 
               {/* Outcomes */}
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(3, 1fr)",
-                  gap: "16px",
-                }}
-                className="outcome-grid"
-              >
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {cs.outcomes.map((o) => (
                   <div
                     key={o.metric}
-                    style={{
-                      backgroundColor: card,
-                      border: `1px solid ${border}`,
-                      borderRadius: "14px",
-                      padding: "24px",
-                    }}
+                    className="bg-secondary border border-white/5 rounded-2xl p-6"
                   >
-                    <p
-                      style={{
-                        fontSize: "32px",
-                        fontWeight: 700,
-                        letterSpacing: "-0.03em",
-                        color: accent,
-                        marginBottom: "4px",
-                      }}
-                    >
+                    <p className="font-sans text-[32px] font-bold tracking-[-0.03em] text-primary mb-1">
                       {o.value}
                     </p>
-                    <p
-                      style={{
-                        fontSize: "13px",
-                        color: muted,
-                        lineHeight: 1.4,
-                      }}
-                    >
+                    <p className="font-sans text-[13px] text-muted-foreground leading-[1.4]">
                       {o.metric} · {o.period}
                     </p>
                   </div>
@@ -260,49 +140,18 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* CTA */}
-      <section
-        style={{
-          padding: "100px 24px",
-          backgroundColor: "#1e1e1e",
-          borderTop: `1px solid ${border}`,
-          textAlign: "center",
-        }}
-      >
-        <div style={{ maxWidth: "520px", margin: "0 auto" }}>
-          <h2
-            style={{
-              fontSize: "clamp(26px, 3.5vw, 42px)",
-              fontWeight: 700,
-              letterSpacing: "-0.025em",
-              lineHeight: 1.1,
-              marginBottom: "20px",
-            }}
-          >
+      <section className="py-[100px] px-6 bg-secondary border-t border-white/5 text-center">
+        <div className="max-w-[520px] mx-auto">
+          <h2 className="font-sans text-[clamp(26px,3.5vw,42px)] font-bold tracking-[-0.025em] leading-[1.1] mb-5">
             Want results like these?
           </h2>
-          <p
-            style={{
-              fontSize: "16px",
-              color: muted,
-              lineHeight: 1.7,
-              marginBottom: "36px",
-            }}
-          >
+          <p className="font-sans text-base text-muted-foreground leading-[1.7] mb-9">
             Book a GTM assessment. We&apos;ll diagnose your pipeline problem and
             show you exactly what a system would look like for your motion.
           </p>
           <Link
             href="/contact"
-            className="btn-white"
-            style={{
-              fontSize: "14px",
-              fontWeight: 500,
-              color: "#1a1a1a",
-              backgroundColor: "#ffffff",
-              padding: "12px 28px",
-              borderRadius: "100px",
-              textDecoration: "none",
-            }}
+            className="inline-block bg-primary text-primary-foreground font-sans text-sm font-medium px-7 py-3 rounded-full no-underline"
           >
             Book a GTM Assessment
           </Link>

@@ -11,112 +11,46 @@ export const metadata: Metadata = {
   },
 };
 
-const accent = "#e8d5ff";
-const card = "#222222";
-const border = "rgba(255,255,255,0.07)";
-const muted = "rgba(255,255,255,0.55)";
-
 export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section style={{ padding: "140px 24px 80px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <p
-            style={{
-              fontSize: "11px",
-              fontWeight: 600,
-              letterSpacing: "0.1em",
-              color: muted,
-              textTransform: "uppercase",
-              marginBottom: "20px",
-            }}
-          >
+      <section className="pt-[140px] pb-20 px-6">
+        <div className="max-w-[1200px] mx-auto">
+          <p className="text-[11px] font-semibold tracking-[0.1em] text-muted-foreground uppercase mb-5">
             About
           </p>
-          <h1
-            style={{
-              fontSize: "clamp(36px, 5vw, 68px)",
-              fontWeight: 700,
-              lineHeight: 1.05,
-              letterSpacing: "-0.03em",
-              maxWidth: "760px",
-              marginBottom: "24px",
-            }}
-          >
+          <h1 className="text-[clamp(36px,5vw,68px)] font-bold leading-[1.05] tracking-[-0.03em] max-w-[760px] mb-6">
             We build GTM systems,{" "}
-            <span style={{ color: accent }}>not decks</span>
+            <span className="text-primary">not decks</span>
           </h1>
-          <p
-            style={{
-              fontSize: "17px",
-              color: muted,
-              lineHeight: 1.7,
-              maxWidth: "540px",
-            }}
-          >
+          <p className="text-[17px] text-muted-foreground leading-[1.7] max-w-[540px]">
             Steady Thread Media is a GTM engineering agency based in Charlotte, NC. We help B2B revenue teams replace referral dependency and inconsistent outreach with signal-based systems that run.
           </p>
         </div>
       </section>
 
       {/* Story */}
-      <section style={{ padding: "0 24px 80px" }}>
+      <section className="px-6 pb-20">
         <div
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "80px",
-            borderTop: `1px solid ${border}`,
-            paddingTop: "64px",
-          }}
-          className="about-grid"
+          className="max-w-[1200px] mx-auto border-t border-white/5 pt-16 gap-20 about-grid"
+          style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}
         >
           <div>
-            <h2
-              style={{
-                fontSize: "clamp(22px, 2.5vw, 32px)",
-                fontWeight: 700,
-                lineHeight: 1.2,
-                letterSpacing: "-0.02em",
-                marginBottom: "24px",
-              }}
-            >
+            <h2 className="text-[clamp(22px,2.5vw,32px)] font-bold leading-[1.2] tracking-[-0.02em] mb-6">
               Why we exist
             </h2>
-            <p
-              style={{
-                fontSize: "15px",
-                color: muted,
-                lineHeight: 1.8,
-                marginBottom: "20px",
-              }}
-            >
+            <p className="text-[15px] text-muted-foreground leading-[1.8] mb-5">
               Most B2B pipeline problems aren&apos;t caused by bad product or weak demand. They come from not having a system that reliably gets you in front of the right people at the right time.
             </p>
-            <p
-              style={{
-                fontSize: "15px",
-                color: muted,
-                lineHeight: 1.8,
-                marginBottom: "20px",
-              }}
-            >
+            <p className="text-[15px] text-muted-foreground leading-[1.8] mb-5">
               We started Steady Thread because we kept seeing the same pattern: great companies with strong ICPs and real value propositions, stuck because they had no consistent outbound motion and no visibility into when accounts were actually ready to buy.
             </p>
-            <p
-              style={{
-                fontSize: "15px",
-                color: muted,
-                lineHeight: 1.8,
-              }}
-            >
+            <p className="text-[15px] text-muted-foreground leading-[1.8]">
               We built the solution we wished existed — a GTM engineering firm that actually implements the system, runs it alongside you, and is accountable to pipeline outcomes, not deliverable checkboxes.
             </p>
           </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+          <div className="flex flex-col gap-5">
             {[
               {
                 label: "Founded",
@@ -141,44 +75,15 @@ export default function AboutPage() {
             ].map((stat) => (
               <div
                 key={stat.label}
-                style={{
-                  backgroundColor: card,
-                  border: `1px solid ${border}`,
-                  borderRadius: "14px",
-                  padding: "24px",
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  gap: "16px",
-                }}
+                className="bg-secondary border border-white/5 rounded-2xl p-6 flex justify-between items-center gap-4"
               >
                 <div>
-                  <p
-                    style={{
-                      fontSize: "11px",
-                      fontWeight: 600,
-                      letterSpacing: "0.08em",
-                      color: muted,
-                      textTransform: "uppercase",
-                      marginBottom: "6px",
-                    }}
-                  >
+                  <p className="text-[11px] font-semibold tracking-[0.08em] text-muted-foreground uppercase mb-1.5">
                     {stat.label}
                   </p>
-                  <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.6)" }}>
-                    {stat.sub}
-                  </p>
+                  <p className="text-[13px] text-white/60">{stat.sub}</p>
                 </div>
-                <p
-                  style={{
-                    fontSize: "20px",
-                    fontWeight: 700,
-                    letterSpacing: "-0.02em",
-                    color: accent,
-                    textAlign: "right",
-                    flexShrink: 0,
-                  }}
-                >
+                <p className="text-[20px] font-bold tracking-[-0.02em] text-primary text-right shrink-0">
                   {stat.value}
                 </p>
               </div>
@@ -188,51 +93,17 @@ export default function AboutPage() {
       </section>
 
       {/* How we're different */}
-      <section
-        style={{
-          padding: "80px 24px",
-          backgroundColor: "#1e1e1e",
-          borderTop: `1px solid ${border}`,
-          borderBottom: `1px solid ${border}`,
-        }}
-      >
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <h2
-            style={{
-              fontSize: "clamp(24px, 3vw, 36px)",
-              fontWeight: 700,
-              letterSpacing: "-0.025em",
-              marginBottom: "48px",
-            }}
-          >
+      <section className="py-20 px-6 bg-secondary border-t border-white/5 border-b border-white/5">
+        <div className="max-w-[1200px] mx-auto">
+          <h2 className="text-[clamp(24px,3vw,36px)] font-bold tracking-tight mb-12">
             How we&apos;re different from a GTM consultant
           </h2>
           <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "24px",
-            }}
-            className="diff-grid"
+            className="gap-6 diff-grid"
+            style={{ display: "grid", gridTemplateColumns: "1fr 1fr" }}
           >
-            <div
-              style={{
-                backgroundColor: "rgba(255,255,255,0.03)",
-                border: `1px solid ${border}`,
-                borderRadius: "14px",
-                padding: "28px",
-              }}
-            >
-              <p
-                style={{
-                  fontSize: "12px",
-                  fontWeight: 600,
-                  letterSpacing: "0.06em",
-                  color: muted,
-                  textTransform: "uppercase",
-                  marginBottom: "20px",
-                }}
-              >
+            <div className="bg-white/[0.03] border border-white/5 rounded-2xl p-7">
+              <p className="text-[12px] font-semibold tracking-[0.06em] text-muted-foreground uppercase mb-5">
                 Typical GTM Consultant
               </p>
               {[
@@ -244,39 +115,15 @@ export default function AboutPage() {
               ].map((item) => (
                 <div
                   key={item}
-                  style={{
-                    display: "flex",
-                    alignItems: "flex-start",
-                    gap: "10px",
-                    fontSize: "14px",
-                    color: muted,
-                    marginBottom: "12px",
-                    lineHeight: 1.5,
-                  }}
+                  className="flex items-start gap-2.5 text-[14px] text-muted-foreground mb-3 leading-[1.5]"
                 >
-                  <span style={{ color: "rgba(255,255,255,0.2)", flexShrink: 0 }}>—</span>
+                  <span className="text-white/20 shrink-0">—</span>
                   {item}
                 </div>
               ))}
             </div>
-            <div
-              style={{
-                backgroundColor: "rgba(232,213,255,0.05)",
-                border: "1px solid rgba(232,213,255,0.15)",
-                borderRadius: "14px",
-                padding: "28px",
-              }}
-            >
-              <p
-                style={{
-                  fontSize: "12px",
-                  fontWeight: 600,
-                  letterSpacing: "0.06em",
-                  color: accent,
-                  textTransform: "uppercase",
-                  marginBottom: "20px",
-                }}
-              >
+            <div className="bg-primary/5 border border-primary/15 rounded-2xl p-7">
+              <p className="text-[12px] font-semibold tracking-[0.06em] text-primary uppercase mb-5">
                 Steady Thread Media
               </p>
               {[
@@ -288,17 +135,9 @@ export default function AboutPage() {
               ].map((item) => (
                 <div
                   key={item}
-                  style={{
-                    display: "flex",
-                    alignItems: "flex-start",
-                    gap: "10px",
-                    fontSize: "14px",
-                    color: "rgba(255,255,255,0.75)",
-                    marginBottom: "12px",
-                    lineHeight: 1.5,
-                  }}
+                  className="flex items-start gap-2.5 text-[14px] text-white/75 mb-3 leading-[1.5]"
                 >
-                  <span style={{ color: accent, flexShrink: 0 }}>✓</span>
+                  <span className="text-primary shrink-0">✓</span>
                   {item}
                 </div>
               ))}
@@ -308,89 +147,38 @@ export default function AboutPage() {
       </section>
 
       {/* Founder */}
-      <section style={{ padding: "80px 24px" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <p
-            style={{
-              fontSize: "11px",
-              fontWeight: 600,
-              letterSpacing: "0.1em",
-              color: muted,
-              textTransform: "uppercase",
-              marginBottom: "40px",
-            }}
-          >
+      <section className="py-20 px-6">
+        <div className="max-w-[1200px] mx-auto">
+          <p className="text-[11px] font-semibold tracking-[0.1em] text-muted-foreground uppercase mb-10">
             Founder
           </p>
           <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "auto 1fr",
-              gap: "40px",
-              alignItems: "start",
-              maxWidth: "720px",
-            }}
-            className="founder-grid"
+            className="gap-10 items-start max-w-[720px] founder-grid"
+            style={{ display: "grid", gridTemplateColumns: "auto 1fr" }}
           >
             {/* Avatar */}
-            <div
-              style={{
-                width: "160px",
-                height: "160px",
-                borderRadius: "50%",
-                overflow: "hidden",
-                border: `1px solid ${border}`,
-                flexShrink: 0,
-              }}
-            >
+            <div className="w-40 h-40 rounded-full overflow-hidden border border-white/5 shrink-0">
               <Image
                 src="/jared-webber.jpg"
                 alt="Jared Webber"
                 width={160}
                 height={160}
-                style={{ objectFit: "cover", objectPosition: "center 15%", width: "100%", height: "100%" }}
+                className="object-cover w-full h-full"
+                style={{ objectPosition: "center 15%" }}
               />
             </div>
             {/* Bio */}
             <div>
-              <p
-                style={{
-                  fontSize: "20px",
-                  fontWeight: 700,
-                  letterSpacing: "-0.02em",
-                  marginBottom: "4px",
-                }}
-              >
+              <p className="text-[20px] font-bold tracking-[-0.02em] mb-1">
                 Jared Webber
               </p>
-              <p
-                style={{
-                  fontSize: "12px",
-                  color: accent,
-                  fontWeight: 500,
-                  letterSpacing: "0.04em",
-                  marginBottom: "20px",
-                }}
-              >
+              <p className="text-[12px] text-primary font-medium tracking-[0.04em] mb-5">
                 Founder & GTM Engineer
               </p>
-              <p
-                style={{
-                  fontSize: "15px",
-                  color: muted,
-                  lineHeight: 1.8,
-                  marginBottom: "16px",
-                }}
-              >
+              <p className="text-[15px] text-muted-foreground leading-[1.8] mb-4">
                 Background in marketing, demand generation, and agency-side GTM work across B2B. Started Steady Thread to build the kind of outbound infrastructure he kept wishing clients already had — signal-based, accountable, and actually running.
               </p>
-              <p
-                style={{
-                  fontSize: "15px",
-                  color: muted,
-                  lineHeight: 1.8,
-                }}
-              >
+              <p className="text-[15px] text-muted-foreground leading-[1.8]">
                 Based in Charlotte, NC. Focused on Clay, HubSpot, and the systems that turn ICP clarity into consistent pipeline.
               </p>
             </div>
@@ -399,42 +187,18 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section style={{ padding: "100px 24px", textAlign: "center" }}>
-        <div style={{ maxWidth: "520px", margin: "0 auto" }}>
-          <h2
-            style={{
-              fontSize: "clamp(26px, 3.5vw, 42px)",
-              fontWeight: 700,
-              letterSpacing: "-0.025em",
-              lineHeight: 1.1,
-              marginBottom: "20px",
-            }}
-          >
+      <section className="py-[100px] px-6 text-center">
+        <div className="max-w-[520px] mx-auto">
+          <h2 className="text-[clamp(26px,3.5vw,42px)] font-bold tracking-[-0.025em] leading-[1.1] mb-5">
             Work with us
           </h2>
-          <p
-            style={{
-              fontSize: "16px",
-              color: muted,
-              lineHeight: 1.7,
-              marginBottom: "36px",
-            }}
-          >
+          <p className="text-[16px] text-muted-foreground leading-[1.7] mb-9">
             We take on a limited number of clients at a time to stay focused.
             Book a GTM assessment to see if we&apos;re a fit.
           </p>
           <Link
             href="/contact"
-            className="btn-white"
-            style={{
-              fontSize: "14px",
-              fontWeight: 500,
-              color: "#1a1a1a",
-              backgroundColor: "#ffffff",
-              padding: "12px 28px",
-              borderRadius: "100px",
-              textDecoration: "none",
-            }}
+            className="btn-white inline-block text-[14px] font-medium text-[#1a1a1a] bg-white py-3 px-7 rounded-full no-underline"
           >
             Book a GTM Assessment
           </Link>
