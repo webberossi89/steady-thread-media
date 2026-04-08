@@ -125,6 +125,28 @@ export default function RootLayout({
             })
           }}
         />
+        {/* WebSite schema — injected by SEO system */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Steady Thread Media",
+              "url": "https://steadythreadmedia.com",
+              "description": "Steady Thread Media is a Charlotte, North Carolina-based GTM engineering agency that helps B2B companies build consistent pipeline through signal-based outbound, account-based marketing, and revenue operations.",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://steadythreadmedia.com/?s={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              }
+            })
+          }}
+        />
+
 
         <Script
           id="gtm-script"
