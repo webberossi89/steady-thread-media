@@ -17,6 +17,15 @@ const muted = "rgba(255,255,255,0.55)";
 
 const posts = [
   {
+    category: "Marketing",
+    title: "What Is GTM Engineering? A Guide for B2B SaaS Teams",
+    summary: "GTM engineering builds the outbound systems, signals, and infrastructure B2B teams need for consistent pipeline. Here's what it is and how it works.",
+    date: "April 4, 2026",
+    dateISO: "2026-04-05",
+    readTime: "9 min read",
+    slug: "what-is-gtm-engineering",
+  },
+  {
     category: "GTM Strategy",
     title: "What Is a GTM Engineer? The New Revenue Role Redefining B2B Sales",
     summary:
