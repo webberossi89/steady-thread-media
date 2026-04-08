@@ -3,112 +3,179 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { ArrowDownRight, Download } from "lucide-react";
 
-const logoFiles = [
+type Asset = {
+  name: string;
+  file: string;
+  bgClass: string;
+  imgClass: string;
+  description: string;
+  format: string;
+};
+
+const coreAssets: Asset[] = [
   {
     name: "Horizontal lockup · Light",
-    file: "/brand/steady-thread-lockup-light.svg",
+    file: "/brand/steady-thread-lockup-horizontal-light.svg",
     bgClass: "bg-[#1A1A1A]",
     imgClass: "max-h-24 w-full object-contain",
-    type: "SVG"
+    description: "Primary horizontal logo for dark backgrounds.",
+    format: "SVG + PNG"
   },
   {
     name: "Horizontal lockup · Dark",
-    file: "/brand/steady-thread-lockup-dark.svg",
+    file: "/brand/steady-thread-lockup-horizontal-dark.svg",
     bgClass: "bg-white",
     imgClass: "max-h-24 w-full object-contain",
-    type: "SVG"
+    description: "Primary horizontal logo for light backgrounds.",
+    format: "SVG + PNG"
   },
   {
     name: "Stacked lockup · Light",
     file: "/brand/steady-thread-stacked-light.svg",
     bgClass: "bg-[#1A1A1A]",
     imgClass: "max-h-64 w-full object-contain",
-    type: "SVG"
+    description: "Centered composition for covers, decks, and social cards on dark surfaces.",
+    format: "SVG + PNG"
   },
   {
     name: "Stacked lockup · Dark",
     file: "/brand/steady-thread-stacked-dark.svg",
     bgClass: "bg-white",
     imgClass: "max-h-64 w-full object-contain",
-    type: "SVG"
+    description: "Centered composition for proposals and docs on light surfaces.",
+    format: "SVG + PNG"
   },
   {
     name: "Wordmark · Light",
     file: "/brand/steady-thread-wordmark-light.svg",
     bgClass: "bg-[#1A1A1A]",
     imgClass: "max-h-20 w-full object-contain",
-    type: "SVG"
+    description: "Text-only option for minimal branded applications on dark backgrounds.",
+    format: "SVG + PNG"
   },
   {
     name: "Wordmark · Dark",
     file: "/brand/steady-thread-wordmark-dark.svg",
     bgClass: "bg-white",
     imgClass: "max-h-20 w-full object-contain",
-    type: "SVG"
-  },
-  {
-    name: "Mark · PNG",
-    file: "/brand/steady-thread-mark.png",
-    bgClass: "bg-[#1A1A1A]",
-    imgClass: "max-h-28 w-full object-contain",
-    type: "PNG"
-  },
-  {
-    name: "Mark · SVG",
-    file: "/brand/steady-thread-mark.svg",
-    bgClass: "bg-white",
-    imgClass: "max-h-28 w-full object-contain",
-    type: "SVG"
+    description: "Text-only option for clean layouts on white backgrounds.",
+    format: "SVG + PNG"
   }
 ];
 
-const conceptFiles = [
+const markAssets: Asset[] = [
+  {
+    name: "Mark only · Lavender",
+    file: "/brand/steady-thread-mark-lavender.svg",
+    bgClass: "bg-[#1A1A1A]",
+    imgClass: "max-h-28 w-full object-contain",
+    description: "Transparent standalone mark for overlays, layering, favicon builds, and avatars.",
+    format: "SVG + PNG"
+  },
+  {
+    name: "Mark only · White",
+    file: "/brand/steady-thread-mark-white.svg",
+    bgClass: "bg-[#2B2730]",
+    imgClass: "max-h-28 w-full object-contain",
+    description: "Monochrome white mark for dark photos, videos, and banner placements.",
+    format: "SVG + PNG"
+  },
+  {
+    name: "Mark only · Charcoal",
+    file: "/brand/steady-thread-mark-charcoal.svg",
+    bgClass: "bg-[#F6F1FA]",
+    imgClass: "max-h-28 w-full object-contain",
+    description: "Monochrome dark mark for white backgrounds and print-style layouts.",
+    format: "SVG + PNG"
+  },
+  {
+    name: "Primary mark alias",
+    file: "/brand/steady-thread-mark.svg",
+    bgClass: "bg-[#1A1A1A]",
+    imgClass: "max-h-28 w-full object-contain",
+    description: "Main mark file mirrored for easy handoff and reuse.",
+    format: "SVG + PNG"
+  }
+];
+
+const utilityAssets: Asset[] = [
+  {
+    name: "Avatar · Dark",
+    file: "/brand/steady-thread-avatar-dark.svg",
+    bgClass: "bg-[#1A1A1A]",
+    imgClass: "max-h-48 w-full object-contain",
+    description: "Square social/profile avatar for dark surfaces.",
+    format: "SVG + PNG"
+  },
+  {
+    name: "Avatar · Light",
+    file: "/brand/steady-thread-avatar-light.svg",
+    bgClass: "bg-white",
+    imgClass: "max-h-48 w-full object-contain",
+    description: "Square social/profile avatar for light surfaces.",
+    format: "SVG + PNG"
+  },
+  {
+    name: "Banner · Dark",
+    file: "/brand/steady-thread-banner-dark.svg",
+    bgClass: "bg-[#1A1A1A]",
+    imgClass: "max-h-40 w-full object-contain",
+    description: "Wide banner asset for decks, headers, and social cover images.",
+    format: "SVG + PNG"
+  },
+  {
+    name: "Banner · Light",
+    file: "/brand/steady-thread-banner-light.svg",
+    bgClass: "bg-white",
+    imgClass: "max-h-40 w-full object-contain",
+    description: "Light-background banner for docs, reports, and clean presentation slides.",
+    format: "SVG + PNG"
+  }
+];
+
+const conceptAssets: Asset[] = [
   {
     name: "Compact lockup",
     file: "/brand/variants/steady-thread-variant-compact-dark.svg",
     bgClass: "bg-[#1A1A1A]",
     imgClass: "max-h-24 w-full object-contain",
-    note: "Tighter and more corporate. Best when you want a cleaner navbar or proposal header lockup."
+    description: "A tighter version for nav bars and compact horizontal placements.",
+    format: "SVG + PNG"
   },
   {
     name: "Editorial signature",
     file: "/brand/variants/steady-thread-variant-editorial-dark.svg",
     bgClass: "bg-[#1A1A1A]",
     imgClass: "max-h-44 w-full object-contain",
-    note: "More premium and brand-led. Best for pitch covers, hero sections, and polished brand moments."
+    description: "A more premium, centered expression for polished brand moments.",
+    format: "SVG + PNG"
   },
   {
     name: "Badge system",
     file: "/brand/variants/steady-thread-variant-badge-dark.svg",
     bgClass: "bg-[#1A1A1A]",
     imgClass: "max-h-32 w-full object-contain",
-    note: "Contained and platform-friendly. Best for social banners, favicons, and compact placements."
+    description: "Contained lockup for social, merch-style, or badge-like use cases.",
+    format: "SVG + PNG"
   },
   {
-    name: "Minimal light",
+    name: "Minimal dark-on-light",
     file: "/brand/variants/steady-thread-variant-minimal-light.svg",
     bgClass: "bg-white",
     imgClass: "max-h-24 w-full object-contain",
-    note: "Lighter and more editorial on white backgrounds. Best for proposals, docs, and client-facing PDFs."
+    description: "A restrained minimal version for white-background editorial layouts.",
+    format: "SVG + PNG"
   }
 ];
 
-function AssetCard({
-  asset,
-  index,
-  prefix
-}: {
-  asset: {
-    name: string;
-    file: string;
-    bgClass: string;
-    imgClass: string;
-    note?: string;
-    type?: string;
-  };
-  index: number;
-  prefix: string;
-}) {
+const colorTokens = [
+  { name: "Charcoal", value: "#1A1A1A", swatch: "bg-[#1A1A1A] border-white/10" },
+  { name: "Lavender", value: "#F0D6FF", swatch: "bg-[#F0D6FF] border-[#E6C5FB]" },
+  { name: "Soft Light", value: "#F6F1FA", swatch: "bg-[#F6F1FA] border-[#E8E0EF]" },
+  { name: "Slate", value: "#5F5566", swatch: "bg-[#5F5566] border-[#6A6071]" }
+];
+
+function AssetCard({ asset, index, prefix }: { asset: Asset; index: number; prefix: string }) {
   return (
     <motion.article
       initial={{ opacity: 0, y: 30 }}
@@ -131,16 +198,12 @@ function AssetCard({
           <p className="text-2xl font-display font-bold text-white" data-testid={`text-${prefix}-name-${index}`}>
             {asset.name}
           </p>
-          {asset.type ? (
-            <p className="mt-2 text-sm uppercase tracking-[0.22em] text-white/40" data-testid={`text-${prefix}-type-${index}`}>
-              {asset.type} asset
-            </p>
-          ) : null}
-          {asset.note ? (
-            <p className="mt-3 text-white/60 leading-relaxed" data-testid={`text-${prefix}-note-${index}`}>
-              {asset.note}
-            </p>
-          ) : null}
+          <p className="mt-2 text-sm uppercase tracking-[0.22em] text-white/40" data-testid={`text-${prefix}-format-${index}`}>
+            {asset.format}
+          </p>
+          <p className="mt-3 text-white/60 leading-relaxed" data-testid={`text-${prefix}-description-${index}`}>
+            {asset.description}
+          </p>
         </div>
         <div className="flex flex-col sm:flex-row gap-3">
           <a
@@ -166,6 +229,36 @@ function AssetCard({
   );
 }
 
+function Section({
+  title,
+  description,
+  assets,
+  prefix
+}: {
+  title: string;
+  description: string;
+  assets: Asset[];
+  prefix: string;
+}) {
+  return (
+    <section className="mb-20">
+      <div className="max-w-3xl mb-10">
+        <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-4" data-testid={`text-${prefix}-heading`}>
+          {title}
+        </h2>
+        <p className="text-white/60 text-lg leading-relaxed" data-testid={`text-${prefix}-description`}>
+          {description}
+        </p>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {assets.map((asset, index) => (
+          <AssetCard key={asset.name} asset={asset} index={index} prefix={prefix} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export default function BrandAssets() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden selection:bg-primary selection:text-primary-foreground">
@@ -184,10 +277,10 @@ export default function BrandAssets() {
                 Steady Thread Media
               </p>
               <h1 className="text-5xl md:text-7xl font-display font-bold text-white leading-[1.02] mb-6" data-testid="text-brand-assets-heading">
-                Brand assets, ready to preview and download.
+                Full brand kit, rebuilt as proper logo assets.
               </h1>
-              <p className="text-lg md:text-xl text-white/65 max-w-2xl leading-relaxed" data-testid="text-brand-assets-description">
-                I added a few distinct logo directions so you can compare the current system against tighter, more editorial, and more contained applications of the same mark.
+              <p className="text-lg md:text-xl text-white/65 max-w-3xl leading-relaxed" data-testid="text-brand-assets-description">
+                I cleaned up the system so the lockups are now true vector logo files using the standalone mark and proper typography — not screenshot fragments placed beside new text.
               </p>
             </motion.div>
 
@@ -195,7 +288,7 @@ export default function BrandAssets() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col sm:flex-row gap-4 mb-16"
+              className="flex flex-col lg:flex-row gap-4 mb-16"
             >
               <a
                 href="/brand/steady-thread-logo-kit.zip"
@@ -207,6 +300,24 @@ export default function BrandAssets() {
                 Download full logo kit
               </a>
               <a
+                href="/brand/steady-thread-fonts.css"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-7 py-4 text-white font-medium transition-all duration-300 hover:-translate-y-1 hover:bg-white/5"
+                data-testid="link-open-fonts-css"
+              >
+                Open font stylesheet
+              </a>
+              <a
+                href="/brand/steady-thread-brand-specs.txt"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-7 py-4 text-white font-medium transition-all duration-300 hover:-translate-y-1 hover:bg-white/5"
+                data-testid="link-open-brand-specs"
+              >
+                Open brand specs
+              </a>
+              <a
                 href="/"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-7 py-4 text-white font-medium transition-all duration-300 hover:-translate-y-1 hover:bg-white/5"
                 data-testid="link-back-home"
@@ -216,37 +327,80 @@ export default function BrandAssets() {
               </a>
             </motion.div>
 
-            <div className="mb-20">
-              <div className="max-w-3xl mb-10">
-                <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-4" data-testid="text-concept-heading">
-                  Concept directions
-                </h2>
-                <p className="text-white/60 text-lg leading-relaxed" data-testid="text-concept-description">
-                  These are different design hypotheses built from the same logo idea, so you can judge which tone feels most like Steady Thread Media.
-                </p>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {conceptFiles.map((asset, index) => (
-                  <AssetCard key={asset.name} asset={asset} index={index} prefix="concept" />
-                ))}
-              </div>
-            </div>
+            <section className="mb-20">
+              <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-8">
+                <div className="rounded-[2rem] border border-white/8 bg-secondary/70 p-8 md:p-10 backdrop-blur-xl" data-testid="card-brand-typography">
+                  <p className="text-sm uppercase tracking-[0.22em] text-primary/70 mb-4" data-testid="text-typography-kicker">
+                    Typography
+                  </p>
+                  <div className="space-y-6">
+                    <div>
+                      <p className="text-5xl md:text-6xl font-display font-bold text-white" data-testid="text-font-display-sample">
+                        Steady Thread
+                      </p>
+                      <p className="mt-3 text-white/60 leading-relaxed" data-testid="text-font-display-info">
+                        Playfair Display Bold — use for the wordmark, editorial headlines, and premium brand moments.
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-xl tracking-[0.4em] text-white/80 uppercase" data-testid="text-font-sans-sample">
+                        Media
+                      </p>
+                      <p className="mt-3 text-white/60 leading-relaxed" data-testid="text-font-sans-info">
+                        Inter Medium — use for the MEDIA line, UI copy, labels, and supporting typography.
+                      </p>
+                    </div>
+                  </div>
+                </div>
 
-            <div>
-              <div className="max-w-3xl mb-10">
-                <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-4" data-testid="text-system-heading">
-                  Current asset system
-                </h2>
-                <p className="text-white/60 text-lg leading-relaxed" data-testid="text-system-description">
-                  These are the production-ready exports for the version currently used on the site.
-                </p>
+                <div className="rounded-[2rem] border border-white/8 bg-secondary/70 p-8 md:p-10 backdrop-blur-xl" data-testid="card-brand-color-system">
+                  <p className="text-sm uppercase tracking-[0.22em] text-primary/70 mb-4" data-testid="text-color-kicker">
+                    Core palette
+                  </p>
+                  <div className="grid grid-cols-2 gap-4">
+                    {colorTokens.map((token, index) => (
+                      <div key={token.name} className="rounded-2xl border border-white/8 bg-background/40 p-4" data-testid={`card-color-${index}`}>
+                        <div className={`h-20 rounded-xl border ${token.swatch}`} data-testid={`swatch-color-${index}`} />
+                        <p className="mt-4 text-white font-medium" data-testid={`text-color-name-${index}`}>
+                          {token.name}
+                        </p>
+                        <p className="text-white/50 text-sm" data-testid={`text-color-value-${index}`}>
+                          {token.value}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {logoFiles.map((asset, index) => (
-                  <AssetCard key={asset.name} asset={asset} index={index} prefix="logo" />
-                ))}
-              </div>
-            </div>
+            </section>
+
+            <Section
+              title="Core lockups"
+              description="These are the main production-ready logo files for web, decks, proposals, and client-facing materials."
+              assets={coreAssets}
+              prefix="core"
+            />
+
+            <Section
+              title="Mark-only assets"
+              description="These are the isolated standalone marks for layering, overlays, avatars, icons, and image compositions."
+              assets={markAssets}
+              prefix="mark"
+            />
+
+            <Section
+              title="Utility assets"
+              description="These are ready-made square and wide compositions for social, covers, and presentation headers."
+              assets={utilityAssets}
+              prefix="utility"
+            />
+
+            <Section
+              title="Alternate logo directions"
+              description="These are cleaned-up variations built from the same mark and type system in case you want to explore a tighter or more editorial direction later."
+              assets={conceptAssets}
+              prefix="concept"
+            />
           </div>
         </section>
       </main>
