@@ -11,6 +11,7 @@ import CaseStudies from "@/pages/CaseStudies";
 import Insights from "@/pages/Insights";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
+import BrandAssets from "@/pages/BrandAssets";
 
 function Router() {
   return (
@@ -22,6 +23,7 @@ function Router() {
       <Route path="/insights" component={Insights} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
+      <Route path="/brand-assets" component={BrandAssets} />
       <Route component={NotFound} />
     </Switch>
   );
