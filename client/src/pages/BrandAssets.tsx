@@ -62,6 +62,110 @@ const logoFiles = [
   }
 ];
 
+const conceptFiles = [
+  {
+    name: "Compact lockup",
+    file: "/brand/variants/steady-thread-variant-compact-dark.svg",
+    bgClass: "bg-[#1A1A1A]",
+    imgClass: "max-h-24 w-full object-contain",
+    note: "Tighter and more corporate. Best when you want a cleaner navbar or proposal header lockup."
+  },
+  {
+    name: "Editorial signature",
+    file: "/brand/variants/steady-thread-variant-editorial-dark.svg",
+    bgClass: "bg-[#1A1A1A]",
+    imgClass: "max-h-44 w-full object-contain",
+    note: "More premium and brand-led. Best for pitch covers, hero sections, and polished brand moments."
+  },
+  {
+    name: "Badge system",
+    file: "/brand/variants/steady-thread-variant-badge-dark.svg",
+    bgClass: "bg-[#1A1A1A]",
+    imgClass: "max-h-32 w-full object-contain",
+    note: "Contained and platform-friendly. Best for social banners, favicons, and compact placements."
+  },
+  {
+    name: "Minimal light",
+    file: "/brand/variants/steady-thread-variant-minimal-light.svg",
+    bgClass: "bg-white",
+    imgClass: "max-h-24 w-full object-contain",
+    note: "Lighter and more editorial on white backgrounds. Best for proposals, docs, and client-facing PDFs."
+  }
+];
+
+function AssetCard({
+  asset,
+  index,
+  prefix
+}: {
+  asset: {
+    name: string;
+    file: string;
+    bgClass: string;
+    imgClass: string;
+    note?: string;
+    type?: string;
+  };
+  index: number;
+  prefix: string;
+}) {
+  return (
+    <motion.article
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.6, delay: index * 0.06, ease: [0.16, 1, 0.3, 1] }}
+      className="rounded-[2rem] border border-white/8 bg-secondary/70 backdrop-blur-xl overflow-hidden shadow-[0_20px_60px_-30px_rgba(0,0,0,0.55)]"
+      data-testid={`card-${prefix}-${index}`}
+    >
+      <div className={`${asset.bgClass} flex min-h-[18rem] items-center justify-center p-10 md:p-12`}>
+        <img
+          src={asset.file}
+          alt={asset.name}
+          className={asset.imgClass}
+          data-testid={`img-${prefix}-${index}`}
+        />
+      </div>
+      <div className="flex flex-col gap-5 p-8">
+        <div>
+          <p className="text-2xl font-display font-bold text-white" data-testid={`text-${prefix}-name-${index}`}>
+            {asset.name}
+          </p>
+          {asset.type ? (
+            <p className="mt-2 text-sm uppercase tracking-[0.22em] text-white/40" data-testid={`text-${prefix}-type-${index}`}>
+              {asset.type} asset
+            </p>
+          ) : null}
+          {asset.note ? (
+            <p className="mt-3 text-white/60 leading-relaxed" data-testid={`text-${prefix}-note-${index}`}>
+              {asset.note}
+            </p>
+          ) : null}
+        </div>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <a
+            href={asset.file}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center rounded-full border border-white/12 px-5 py-3 text-white transition-colors duration-300 hover:bg-white/5"
+            data-testid={`link-open-${prefix}-${index}`}
+          >
+            Open file
+          </a>
+          <a
+            href={asset.file}
+            download
+            className="inline-flex items-center justify-center rounded-full bg-white text-background px-5 py-3 font-medium transition-colors duration-300 hover:bg-primary hover:text-primary-foreground"
+            data-testid={`button-download-${prefix}-${index}`}
+          >
+            Download
+          </a>
+        </div>
+      </div>
+    </motion.article>
+  );
+}
+
 export default function BrandAssets() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden selection:bg-primary selection:text-primary-foreground">
@@ -83,7 +187,7 @@ export default function BrandAssets() {
                 Brand assets, ready to preview and download.
               </h1>
               <p className="text-lg md:text-xl text-white/65 max-w-2xl leading-relaxed" data-testid="text-brand-assets-description">
-                Every logo variation is laid out here so you can review them in-browser, then grab the full pack or download individual files as needed.
+                I added a few distinct logo directions so you can compare the current system against tighter, more editorial, and more contained applications of the same mark.
               </p>
             </motion.div>
 
@@ -112,58 +216,36 @@ export default function BrandAssets() {
               </a>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {logoFiles.map((logo, index) => (
-                <motion.article
-                  key={logo.name}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-60px" }}
-                  transition={{ duration: 0.6, delay: index * 0.06, ease: [0.16, 1, 0.3, 1] }}
-                  className="rounded-[2rem] border border-white/8 bg-secondary/70 backdrop-blur-xl overflow-hidden shadow-[0_20px_60px_-30px_rgba(0,0,0,0.55)]"
-                  data-testid={`card-logo-${index}`}
-                >
-                  <div className={`${logo.bgClass} flex min-h-[18rem] items-center justify-center p-10 md:p-12`}>
-                    <img
-                      src={logo.file}
-                      alt={logo.name}
-                      className={logo.imgClass}
-                      data-testid={`img-logo-${index}`}
-                    />
-                  </div>
-                  <div className="flex flex-col gap-5 p-8">
-                    <div className="flex items-start justify-between gap-4">
-                      <div>
-                        <p className="text-2xl font-display font-bold text-white" data-testid={`text-logo-name-${index}`}>
-                          {logo.name}
-                        </p>
-                        <p className="mt-2 text-sm uppercase tracking-[0.22em] text-white/40" data-testid={`text-logo-type-${index}`}>
-                          {logo.type} asset
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex flex-col sm:flex-row gap-3">
-                      <a
-                        href={logo.file}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center justify-center rounded-full border border-white/12 px-5 py-3 text-white transition-colors duration-300 hover:bg-white/5"
-                        data-testid={`link-open-logo-${index}`}
-                      >
-                        Open file
-                      </a>
-                      <a
-                        href={logo.file}
-                        download
-                        className="inline-flex items-center justify-center rounded-full bg-white text-background px-5 py-3 font-medium transition-colors duration-300 hover:bg-primary hover:text-primary-foreground"
-                        data-testid={`button-download-logo-${index}`}
-                      >
-                        Download
-                      </a>
-                    </div>
-                  </div>
-                </motion.article>
-              ))}
+            <div className="mb-20">
+              <div className="max-w-3xl mb-10">
+                <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-4" data-testid="text-concept-heading">
+                  Concept directions
+                </h2>
+                <p className="text-white/60 text-lg leading-relaxed" data-testid="text-concept-description">
+                  These are different design hypotheses built from the same logo idea, so you can judge which tone feels most like Steady Thread Media.
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {conceptFiles.map((asset, index) => (
+                  <AssetCard key={asset.name} asset={asset} index={index} prefix="concept" />
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <div className="max-w-3xl mb-10">
+                <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-4" data-testid="text-system-heading">
+                  Current asset system
+                </h2>
+                <p className="text-white/60 text-lg leading-relaxed" data-testid="text-system-description">
+                  These are the production-ready exports for the version currently used on the site.
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {logoFiles.map((asset, index) => (
+                  <AssetCard key={asset.name} asset={asset} index={index} prefix="logo" />
+                ))}
+              </div>
             </div>
           </div>
         </section>
