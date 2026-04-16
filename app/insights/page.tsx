@@ -13,6 +13,15 @@ export const metadata: Metadata = {
 const posts = [
   {
     category: "Marketing",
+    title: "Signal-Based Outbound vs Traditional Lead Gen: What B2B Teams Need to Know",
+    summary: "Signal-based outbound targets accounts when they",
+    date: "April 11, 2026",
+    dateISO: "2026-04-12",
+    readTime: "9 min read",
+    slug: "signal-based-outbound-vs-traditional-lead-gen",
+  },
+  {
+    category: "Marketing",
     title: "What Is GTM Engineering? A Guide for B2B SaaS Teams",
     summary: "GTM engineering builds the outbound systems, signals, and infrastructure B2B teams need for consistent pipeline. Here's what it is and how it works.",
     date: "April 4, 2026",
