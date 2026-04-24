@@ -22,6 +22,15 @@ const posts = [
   },
   {
     category: "Marketing",
+    title: "How to Build an ABM Program for B2B SaaS: A 7-Step Framework",
+    summary: "Learn how to build a real ABM program for B2B SaaS — from ICP and account selection to signal-based targeting and pipeline reporting. See how it works.",
+    date: "April 18, 2026",
+    dateISO: "2026-04-19",
+    readTime: "8 min read",
+    slug: "abm-program-b2b-saas-framework",
+  },
+  {
+    category: "Marketing",
     title: "What Is GTM Engineering? A Guide for B2B SaaS Teams",
     summary: "GTM engineering builds the outbound systems, signals, and infrastructure B2B teams need for consistent pipeline. Here's what it is and how it works.",
     date: "April 4, 2026",
