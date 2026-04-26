@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Case Studies | Steady Thread Media",
   description:
-    "Real outcomes from B2B teams that replaced referral dependency with signal-based outbound and ABM systems.",
+    "Real outcomes from B2B teams that replaced referral dependency with signal-based outbound, coordinated ABM, and revenue operations systems.",
   alternates: {
     canonical: "/case-studies",
   },

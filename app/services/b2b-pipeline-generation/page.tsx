@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "B2B Pipeline Generation Services | Steady Thread Media",
   description:
-    "Build a repeatable pipeline system for your B2B revenue team. Signal-based targeting, outbound infrastructure, and ABM execution that generates qualified opportunities.",
+    "Repeatable B2B pipeline systems with signal-based targeting, outbound infrastructure, and ABM execution that drives qualified pipeline for revenue teams.",
   alternates: {
     canonical: "/services/b2b-pipeline-generation",
   },
