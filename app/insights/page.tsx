@@ -22,6 +22,15 @@ const posts = [
   },
   {
     category: "Marketing",
+    title: "Clay for Outbound: How B2B Teams Use Clay to Build Signal-Based Pipelines",
+    summary: "See how B2B revenue teams use Clay to run signal-based outbound at scale. A Clay outbound agency perspective on what works and why. Get the breakdown.",
+    date: "April 25, 2026",
+    dateISO: "2026-04-26",
+    readTime: "8 min read",
+    slug: "clay-outbound-agency-signal-based-pipeline",
+  },
+  {
+    category: "Marketing",
     title: "How to Build an ABM Program for B2B SaaS: A 7-Step Framework",
     summary: "Learn how to build a real ABM program for B2B SaaS — from ICP and account selection to signal-based targeting and pipeline reporting. See how it works.",
     date: "April 18, 2026",
